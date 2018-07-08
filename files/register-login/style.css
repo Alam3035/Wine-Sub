@@ -1,0 +1,98 @@
+
+/** navbar part **/
+
+nav {
+
+    background-color: #ffffff;
+
+}
+
+nav .brand-logo{
+
+    color:#000000;
+
+}
+
+
+
+nav div a {
+
+    color: #000000;
+
+}
+
+nav div i{
+
+    color:#000000;
+
+}
+
+/** navbar part end **/
+
+/**  main part **/
+
+
+
+
+
+
+
+label {
+
+    font-size: 2.5rem;
+    color: #000000;
+
+}
+
+
+small {
+
+    font-size:10%;
+
+}
+   
+
+#term {
+
+    font-size: 1rem;
+
+}
+
+
+
+
+
+
+
+.fab fa-facebook-f {
+
+    size: 30px;
+
+}
+
+    
+
+
+
+
+
+
+
+
+/** main part end **/
+
+/** footer part **/
+
+footer {
+
+    background-color:#727070 !important;
+
+}
+
+footer .footer-copyright {
+
+    background-color: #474646;
+
+}
+
+/** footer part end **/
