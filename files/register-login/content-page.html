@@ -1,187 +1,175 @@
 <!DOCTYPE html>
 <htmL>
 
-    <head>
-        <!-- Required meta tags-->
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            
-        <!-- css stuffs-->
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-            <link rel="stylesheet" href="style.css">
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-            <title>Wine To you</title>
+    <!-- css stuffs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/res-log.css">
 
-    </head>
+    <title>Wine To you</title>
+
+</head>
 
 
-    <body>
-         <nav> <!-- Use materialize-->
-            <div class="nav-wrapper sticky-top">
-                <a href="#!" class="brand-logo">Logo</a>
-                
-                <ul class="right hide-on-med-and-down">
-                    
-                    <li><i class="material-icons">shopping_cart</i></li>
-                    <li><a href="badges.html"><i class="material-icons right">view_module</i></a></li>
-                </ul>
+<body id="home" class="scrollspy">
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav class="teal">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">Wine2U</a>
+                    <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="#!"><i class="material-icons">shopping_cart</i></a></li>
+                        <li>
+                            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Menu</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
-        
-        
-        <div class="jumbotron bg-transparent"> <!-- Use bootstrap-->
-            <h1 class="display-4 d-flex justify-content-center">Howdy!</h1>
-            <p class="lead d-flex justify-content-center">Please Sign In! New Customer Please Click The Box On The Right.</p>
-            <hr class="my-4 bg-dark">
-            <p class="d-flex justify-content-center">Avaliable for [Facebook Login]</p>
-            <!-- <a class="btn btn-primary btn-lg d-flex justify-content-center" href="#" role="button">Learn more</a> -->
-          </div>
+    </div>
 
+    <!-- dropdown-->
+    <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!"><i class="material-icons">add_circle_outline</i>Subscribe</a></li>
+        <li><a href="#!"><i class="material-icons">fingerprint</i>Login / Registrate Account</a></li>
+        <li><a href="#!"><i class="material-icons">tag_faces</i>About Us</a></li>
+        <li><a href="#!"><i class="material-icons">contacts</i>Contact Us</a></li>
+        <li><a href="#!"><i class="fab fa-facebook-square"></i><i class="fab fa-twitter-square"></i><i class="fab fa-instagram"></i></a></li>
+    </ul>
 
-        
-        <main>
+    <!-- Sidenav-->
+    <ul class="sidenav" id="mobile-nav">
+        <li>
+            <a href="#home">Subscribe</a>
+        </li>
+        <li>
+            <a href="#search">Login/Registration</a>
+        </li>
+        <li>
+            <a href="#popular">Contact Us</a>
+        </li>
+        <li>
+            <a href="#gallery">About Us</a>
+        </li>
+        <li>
+            <a href="#contact">Social Media</a>
+        </li>
+    </ul>
 
-            <div class="container"> <!-- Use Bootstrap-->
-                <div class="row">
-                    <div class="col-5">
-                            <form id="login"> 
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Email Address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                            <!-- <small id="emailHelp" class="form-text text-muted">You are save here!</small> -->
-                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                            <a href="">Password Faded? Please Press Here</a>
-                                      </div>
-                                    <div class="form-group form-check">
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                            <label class="form-check-label" for="exampleCheck1">Mark It!</label>
-                                      </div>
-                                      <div class="form-group d-flex justify-content-center">
-                                        <button type="submit" class="btn btn-primary">Login</button>
-                                        </div>
-                                        <hr><p class="d-flex justify-content-center">or</p><hr>
-                                      <div class="form-group">
-                                            <button type="button" class="btn btn-secondary btn-lg btn-block"><i class="fab fa-facebook-f"></i>    Facebook Login</button>
-                                        </div>
-                            </form>
+    <br><br>
+
+    <div class="row">
+        <form class="col l6 s12 m4">
+            <div class="card">
+                <div class="card-action teal white-text">
+                    <h5>Login</h5>
+                </div>
+
+                <div class="card-content">
+                    <div class="input-field">
+                        <label for="username">Username</label>
+                        <input type="text" id="username">
                     </div>
-
-                    <div class="col-1"> <!--Seperate them-->
+                    <div class="input-field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password">
                     </div>
+                    <div class="input-field">
+                        <label>
+                            <input type="checkbox" />
+                            <span>Remember Me</span>
+                        </label>
+                    </div><br><br><br>
+                    <div class="form-field center-align">
+                        <button class="btn-large waves-effect waves-light red">Login</button> <button class="btn-large waves-effect waves-light indigo">Login with  <i class="fab fa-facebook-square"></i></button>
 
-                    <div class="col-5">
-                            <form id="registration"> 
-                                        <div class="form-group">
-                                            <label for="name">Name</label>
-                                             <input type="text" class="form-control" id="inputname" placeholder="Your name">
-                                            </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Email Address</label>
-                                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                           <!-- <small id="emailHelp" class="form-text text-muted">You are save here!</small> -->
-                                            </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                            </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Confirm Password</label>
-                                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Re-enter Password">
-                                         </div>
-                                        <div class="form-group form-check">
-                                            <label id="term" class="checkbox">
-                                                <input type="checkbox">
-                                                Agree to the <a href="">terms and conditions</a>
-                                            </label>
-                                            </div>
-                                        <div class="form-group d-flex justify-content-center">    
-                                            <button type="submit" class="btn btn-primary">Let's Start</button>
-                                            </div>  
-                                            
-                                        <hr><p class="d-flex justify-content-center">or</p><hr>
-
-                                        <div class="form-group">
-                                             <button type="button" class="btn btn-secondary btn-lg btn-block"><i class="fab fa-facebook-f"></i> Use Facebook For Registration</button>
-                                            </div>
-                                 </form>
                     </div>
                 </div>
             </div>
-          
-
-        </main>
-    
-
-
-
-
-
-
-
-        <footer class="page-footer"> <!-- Use materialize-->
-                <div class="container">
-                  <div class="row">
-                    <div class="col l6 s12">
-                      <h5 class="white-text">Contact Us</h5>
-                      <br>
-                      <p class="grey-text text-lighten-4">Wine2U global Ltd</p>
-                      <p class="grey-text text-lighten-4">Tel: (852) 26639993</p>
-                      <p class="grey-text text-lighten-4">Email: <a href="enquiry@wine2u.space">enquiry@wine2u.space</a></p>
-
-
-
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                      <h5 class="white-text">You may need help:</h5>
-                      <br>
-                      <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Our Story</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Terms</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Terms and Information</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Connect Us</a></li>
-                      </ul>
-                    </div>
-                  </div>
+        </form>
+        <form class="col l6 s12 m4">
+            <div class="card">
+                <div class="card-action teal white-text">
+                    <h5>Register Account</h5>
                 </div>
-                <div class="footer-copyright">
-                  <div class="center container">
-                  © 2018 Wine2U - © All rights reserved
-                  <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
-                  </div>
+
+                <div class="card-content">
+                    <div class="input-field">
+                        <label for="username">Username</label>
+                        <input type="text" id="username">
+                    </div>
+                    <div class="input-field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password">
+                    </div>
+                    <div class="input-field">
+                        <label for="password">Reenter password</label>
+                        <input type="password" id="repeat-password">
+                    </div>
+                    <br>
+                    <div class="form-field center-align">
+                        <button class="btn-large waves-effect waves-light red">Create Account</button> <button class="btn-large waves-effect waves-light indigo right-align">Use  <i class="fab fa-facebook-square"></i></button>
+                    </div>
                 </div>
-        </footer>
-
-    
-
-
+            </div>
+        </form>
+    </div>
 
 
+    <!-- Footer -->
+    <footer class="section teal darken-2 white-text center">
+        <p class="flow-text">Wine2U @ 2018 </p>
+    </footer>
 
 
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <!-- materialize script files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!-- fontawesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
-        <!-- Boostrap script files -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-        <!-- materialize script files -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-        <!-- fontawesome -->
-        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    </body>
+    <script>
+        // Sidenav
+        const sideNav = document.querySelector('.sidenav');
+        M.Sidenav.init(sideNav, {});
+
+        // Slider
+        const slider = document.querySelector('.slider');
+        M.Slider.init(slider, {
+            indicators: false,
+            height: 600,
+            transition: 500,
+            interval: 6000
+        });
+
+        // Dropdown
+        $('.dropdown-trigger').dropdown({
+            hover: true,
+            constrainWidth: false
+        });
+
+
+        // Material Boxed
+        const mb = document.querySelectorAll('.materialboxed');
+        M.Materialbox.init(mb, {});
+
+        // ScrollSpy
+        const ss = document.querySelectorAll('.scrollspy');
+        M.ScrollSpy.init(ss, {});
+    </script>
+</body>
 
 </html>
-
-
-
-
-
-
-

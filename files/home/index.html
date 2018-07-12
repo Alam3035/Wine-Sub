@@ -1,158 +1,316 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <!-- Required meta tags-->
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            
-        <!-- css stuffs-->
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-            <link rel="stylesheet" href="style.css">
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-            <title>Wine To you</title>
-    </head>
+    <!-- css stuffs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="/home/assets/css/main.css">
 
-    <body>
-         <nav> <!-- Use materialize-->
-             <div class="nav-wrapper sticky-top">
-                  <a href="#!" class="brand-logo">Logo</a>
-            
-                    <ul class="right hide-on-med-and-down">
-                
-                        <li><i class="material-icons">shopping_cart</i></li>
-                        <li><a href="badges.html"><i class="material-icons right">view_module</i></a></li>
-                     </ul>
-            </div>
-         </nav>
+    <title>Wine To you</title>
+</head>
 
-         <main>
-
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="banner/1/1.jpeg" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="banner/1/2.jpeg" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-
-           <!-- 
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="banner/1/1.jpeg">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="banner/1/2.jpeg">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="banner/1/3.jpg">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div> -->
-
-          
-          <section id="product" class="con splash"> <!--second banner -->
-                
-
-
-
-          </section>
-
-
-        <section id="about-us" class="con splash"> <!-- Third Banner -->
-
-
-            </section>
-
-            
-
-
-
-
-
-         </main>
-
-
-
-        <footer class="page-footer"> <!-- Use materialize-->
+<body id="home" class="scrollspy">
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav class="teal">
             <div class="container">
-              <div class="row">
-                <div class="col l6 s12">
-                  <h5 class="white-text">Contact Us</h5>
-                  <br>
-                  <p class="grey-text text-lighten-4">Wine2U global Ltd</p>
-                  <p class="grey-text text-lighten-4">Tel: (852) 26639993</p>
-                  <p class="grey-text text-lighten-4">Email: <a href="enquiry@wine2u.space">enquiry@wine2u.space</a></p>
-
-
-
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">Wine2U</a>
+                    <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="#!"><i class="material-icons">shopping_cart</i></a></li>
+                        <li>
+                            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Menu</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col l4 offset-l2 s12">
-                  <h5 class="white-text">You may need help:</h5>
-                  <br>
-                  <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Our Story</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Terms</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Terms and Information</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Connect Us</a></li>
-                  </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- dropdown-->
+    <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!"><i class="material-icons">add_circle_outline</i>Subscribe</a></li>
+        <li><a href="#!"><i class="material-icons">fingerprint</i>Login / Registrate Account</a></li>
+        <li><a href="#!"><i class="material-icons">tag_faces</i>About Us</a></li>
+        <li><a href="#!"><i class="material-icons">contacts</i>Contact Us</a></li>
+        <li><a href="#!"><i class="fab fa-facebook-square"></i><i class="fab fa-twitter-square"></i><i class="fab fa-instagram"></i></a></li>
+    </ul>
+
+    <!-- Sidenav-->
+    <ul class="sidenav" id="mobile-nav">
+        <li>
+            <a href="#home">Subscribe</a>
+        </li>
+        <li>
+            <a href="#search">Login/Registration</a>
+        </li>
+        <li>
+            <a href="#popular">Contact Us</a>
+        </li>
+        <li>
+            <a href="#gallery">About Us</a>
+        </li>
+        <li>
+            <a href="#contact">Social Media</a>
+        </li>
+    </ul>
+
+    <!-- Section: Slider -->
+    <section class="slider">
+        <ul class="slides">
+            <li>
+                <img class="center" src="/home/assets/banner/1/1.jpeg">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h2 class="black-text">Enjoy Wine without the hassle</h2>
+                    <h4 class="light black-text text-lighten-3 hide-on-small-only">Tried of going everywhere to search for the wine that fits your taste?</h4>
                 </div>
-              </div>
+            </li>
+            <li>
+                <img class="center" src="/home/assets/banner/1/2.jpeg">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h2 class="black-text">Premium quality wine at your fingertips</h2>
+                    <h5 class="light black-text text-lighten-3 hide-on-small-only">You don't have to go everywhere looking for what you want!</h5>
+                </div>
+            </li>
+            <li>
+                <img class="center" src="/home/assets/banner/1/3.jpg">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h2 class="black-text">Want to feel elegent at a low cost?</h2>
+                    <h5 class="light black-text text-lighten-3 hide-on-small-only">Don't need to be rich brat to enjoy something</h5>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Section: Search -->
+    <section class="section section-search teal darken-1 white-text center scrollspy">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h3>Take the test and see what we have for you</h3>
+                    <div>
+                        <a class="waves-effect waves-light btn-large">Click Me!</a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-copyright">
-              <div class="center container">
-              © 2018 Wine2U - © All rights reserved
-              <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
-              </div>
+        </div>
+    </section>
+
+    <!-- Section: Icon Boxes -->
+    <section class="section section-icons grey lighten-4 center">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card-panel">
+                        <i class="material-icons large teal-text">assignment</i>
+                        <h4>1. Take the test</h4>
+                        <p>Answer couple question for us recommend the best wine we have!</p>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card-panel">
+                        <i class="material-icons large teal-text">local_shipping</i>
+                        <h4>2. Choose Your Plan</h4>
+                        <p>Choose the plan that you like and input your address to get the items delivered!</p>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card-panel">
+                        <i class="material-icons large teal-text">insert_emoticon</i>
+                        <h4>3. Enjoy</h4>
+                        <p>Sit back, relax and enjoy your wine either by yourself during night time or with your friends and love ones on special days!</p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Section: Popular Places -->
+    <section id="popular" class="section section-popular scrollspy">
+        <div class="container">
+            <div class="row">
+                <h4 class="center">
+                    <span class="teal-text">Popular</span> Recommendations</h4>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/home/assets/banner/2/first-wine.jpg" alt="">
+                        </div>
+                        <div class="card-content">
+                            From vines between 30 and 50 years old, and aged in barrels for 16 months. Attractive collection of balsamic notes, chocolate and black fruits, a modern-style wine with huge fruit, big body.</div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/home/assets/banner/2/second-wine.jpg" alt="">
+                        </div>
+                        <div class="card-content">
+                            A candidate for perfection with a few more years of bottle age, this great vintage of Angelus has gorgeous nose of incense, graphite, blackberry liqueur, truffles and spring flowers. </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="/home/assets/banner/2/third-wine.jpg" alt="">
+                        </div>
+                        <div class="card-content">
+                            The 2013 Aquilón is a selection of the best plots of vines as well as the best Garnacha barrels in the cellar, produced as an intense blending exercise. </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section: Gallery -->
+    <section id="gallery" class="section section-gallery scrollspy">
+        <div class="container">
+            <h4 class="center">
+                <span class="teal-text">Photo</span> Gallery
+            </h4>
+            <div class="row">
+                <div class="col s12 m3">
+                    <img src="https://source.unsplash.com/1600x900/?beach" alt="" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="https://source.unsplash.com/1600x900/?travel" alt="" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="https://source.unsplash.com/1600x900/?nature" alt="" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="https://source.unsplash.com/1600x900/?beach, travel" alt="" class="materialboxed responsive-img">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m3">
+                    <img src="https://source.unsplash.com/1600x900/?water" alt="" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="https://source.unsplash.com/1600x900/?building" alt="" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="https://source.unsplash.com/1600x900/?trees" alt="" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="https://source.unsplash.com/1600x900/?cruise" alt="" class="materialboxed responsive-img">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m3">
+                    <img src="https://source.unsplash.com/1600x900/?beaches" alt="" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="https://source.unsplash.com/1600x900/?traveling" alt="" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="https://source.unsplash.com/1600x900/?bridge" alt="" class="materialboxed responsive-img">
+                </div>
+                <div class="col s12 m3">
+                    <img src="https://source.unsplash.com/1600x900/?beach, travel,boat" alt="" class="materialboxed responsive-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Contact -->
+    <section id="contact" class="section section-contact scrollspy">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card-panel teal white-text center">
+                        <i class="material-icons">email</i>
+                        <h5>Contact Us For Enquiry</h5>
+                        <p>Got any questions? Want to know more about us? Wnat to get in touch with us? Send an email and we will reply in 1 day time.</p>
+                    </div>
+                    <ul class="collection with-header">
+                        <li class="collection-header">
+                            <h4>Location</h4>
+                        </li>
+                        <li class="collection-item">Wine2U Corporation</li>
+                        <li class="collection-item">Someplace, Someplace</li>
+                        <li class="collection-item">Yau Ma Tei, Hong Kong</li>
+                    </ul>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card-panel grey lighten-3">
+                        <h5>Please fill out this form</h5>
+                        <div class="input-field">
+                            <input type="text" placeholder="Name">
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="Email">
+                        </div>
+                        <div class="input-field">
+                            <input type="text" placeholder="Phone">
+                        </div>
+                        <div class="input-field">
+                            <textarea class="materialize-textarea" placeholder="Enter Message"></textarea>
+                        </div>
+                        <input type="submit" value="Submit" class="btn">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section teal darken-2 white-text center">
+        <p class="flow-text">Wine2U @ 2018 </p>
     </footer>
-    
 
-
-
-
-
-
-    <!-- Boostrap script files -->
+    <!--JavaScript at end of body for optimized loading-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <!-- materialize script files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <!-- fontawesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+
+    <script>
+        // Sidenav
+        const sideNav = document.querySelector('.sidenav');
+        M.Sidenav.init(sideNav, {});
+
+        // Slider
+        const slider = document.querySelector('.slider');
+        M.Slider.init(slider, {
+            indicators: false,
+            height: 600,
+            transition: 500,
+            interval: 6000
+        });
+
+        // Dropdown
+        $('.dropdown-trigger').dropdown({
+            hover: true,
+            constrainWidth: false
+        });
+
+
+        // Material Boxed
+        const mb = document.querySelectorAll('.materialboxed');
+        M.Materialbox.init(mb, {});
+
+        // ScrollSpy
+        const ss = document.querySelectorAll('.scrollspy');
+        M.ScrollSpy.init(ss, {});
+    </script>
 </body>
 
 </html>
