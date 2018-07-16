@@ -1,10 +1,18 @@
-.this-list {
-    margin: 0 auto;
+html {
+    background: #000000;
+    color: #ffffff;
 }
 
-.section-search input {
-    padding: 5px !important;
-    font-size: 18px !important;
-    width: 90% !important;
-    border: #f4f4f4 3px solid !important;
+.get {
+
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.images{
+
+    background-color: #ffffff;
+
 }
