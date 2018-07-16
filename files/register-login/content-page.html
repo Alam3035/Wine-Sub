@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<htmL>
+<html>
 
 <head>
     <!-- Required meta tags-->
@@ -17,7 +17,7 @@
 </head>
 
 
-<body id="home" class="scrollspy">
+<main id="home" class="scrollspy">
     <!-- Navbar -->
     <div class="navbar-fixed">
         <nav class="teal">
@@ -31,7 +31,7 @@
                         <li>
                             <a href="#!"><i class="material-icons">shopping_cart</i></a></li>
                         <li>
-                            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Menu</a>
+                            <a class="dropdown-trigger btn" href="#" data-target="dropdown1">Menu</a>
                         </li>
                     </ul>
                 </div>
@@ -40,7 +40,7 @@
     </div>
 
     <!-- dropdown-->
-    <ul id='dropdown1' class='dropdown-content'>
+    <ul id="dropdown1" class="dropdown-content">
         <li><a href="#!"><i class="material-icons">add_circle_outline</i>Subscribe</a></li>
         <li><a href="#!"><i class="material-icons">fingerprint</i>Login / Registrate Account</a></li>
         <li><a href="#!"><i class="material-icons">tag_faces</i>About Us</a></li>
@@ -69,90 +69,87 @@
 
     <br><br>
 
-    <div class="row">
-        <form class="col l6 s12 m4">
-            <div class="card">
-                <div class="card-action teal white-text">
-                    <h5>Login</h5>
-                </div>
+    <main>
+        <div class="row">
+            <form class="col l4 s12 m12 offset-l1">
+                <div class="card">
+                    <div class="card-action teal white-text">
+                        <h5>Login</h5>
+                    </div>
 
-                <div class="card-content">
-                    <div class="input-field">
-                        <label for="username">Username</label>
-                        <input type="text" id="username">
-                    </div>
-                    <div class="input-field">
-                        <label for="password">Password</label>
-                        <input type="password" id="password">
-                    </div>
-                    <div class="input-field">
-                        <label>
-                            <input type="checkbox" />
+                    <div class="card-content">
+                        <div class="input-field">
+                            <label for="username">Username</label>
+                            <input type="text" id="username">
+                        </div>
+                        <div class="input-field">
+                            <label for="password">Password</label>
+                            <input type="password" id="password">
+                        </div>
+                        <div class="input-field">
+                            <label>
+                            <input type="checkbox">
                             <span>Remember Me</span>
                         </label>
-                    </div><br><br><br>
-                    <div class="form-field center-align">
-                        <button class="btn-large waves-effect waves-light red">Login</button> <button class="btn-large waves-effect waves-light indigo">Login with  <i class="fab fa-facebook-square"></i></button>
+                        </div><br><br><br>
+                        <div class="form-field center-align">
+                            <button class="btn-large waves-effect waves-light red">Login</button> <button class="btn-large waves-effect waves-light indigo">Login with  <i class="fab fa-facebook-square"></i></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
-        <form class="col l6 s12 m4">
-            <div class="card">
-                <div class="card-action teal white-text">
-                    <h5>Register Account</h5>
-                </div>
+            </form>
 
-                <div class="card-content">
-                    <div class="input-field">
-                        <label for="username">Username</label>
-                        <input type="text" id="username">
+
+            <form class="col l4 s12 m12 offset-l2">
+                <div class="card">
+                    <div class="card-action teal white-text">
+                        <h5>Register Account</h5>
                     </div>
-                    <div class="input-field">
-                        <label for="password">Password</label>
-                        <input type="password" id="password">
-                    </div>
-                    <div class="input-field">
-                        <label for="password">Reenter password</label>
-                        <input type="password" id="repeat-password">
-                    </div>
-                    <br>
-                    <div class="form-field center-align">
-                        <button class="btn-large waves-effect waves-light red">Create Account</button> <button class="btn-large waves-effect waves-light indigo right-align">Use  <i class="fab fa-facebook-square"></i></button>
+
+                    <div class="card-content">
+                        <div class="input-field">
+                            <label for="username">Username</label>
+                            <input type="text" id="username">
+                        </div>
+                        <div class="input-field">
+                            <label for="password">Password</label>
+                            <input type="password" id="password">
+                        </div>
+                        <div class="input-field">
+                            <label for="password">Reenter password</label>
+                            <input type="password" id="repeat-password">
+                        </div>
+                        <br>
+                        <div class="form-field center-align">
+                            <button class="btn-large waves-effect waves-light red">Create Account</button> <button class="btn-large waves-effect waves-light indigo right-align">Use  <i class="fab fa-facebook-square"></i></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
+    </main>
+
+    <br><br><br>
 
 
     <!-- Footer -->
     <footer class="section teal darken-2 white-text center">
-        <p class="flow-text">Wine2U @ 2018 </p>
+        <p class="flow-text">Wine2U &copy; 2018 </p>
     </footer>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
     <!-- materialize script files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js "></script>
     <!-- fontawesome -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js "></script>
 
     <script>
         // Sidenav
         const sideNav = document.querySelector('.sidenav');
         M.Sidenav.init(sideNav, {});
-
-        // Slider
-        const slider = document.querySelector('.slider');
-        M.Slider.init(slider, {
-            indicators: false,
-            height: 600,
-            transition: 500,
-            interval: 6000
-        });
 
         // Dropdown
         $('.dropdown-trigger').dropdown({
@@ -169,6 +166,6 @@
         const ss = document.querySelectorAll('.scrollspy');
         M.ScrollSpy.init(ss, {});
     </script>
-</body>
+    </body>
 
 </html>
