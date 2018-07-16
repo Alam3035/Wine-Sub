@@ -8,26 +8,10 @@ body {
     flex: 1 0 auto;
   }
 
- /** font **/
-  h1 {
-    font-size:4vh;
-  
-  }
+img {
 
-  h2 {
-    font-size: 3vh;
-  }
-
-  h3{
-    font-size: 3vh;
-  }
-      
-  h4{
-    font-size: 4vh;
-  }
-
-  h5 {
-    font-size: 4vh;
-  }
-
+    max-height:200px;
+    max-width:200px;
+}
+ 
   
