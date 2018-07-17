@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <link rel="stylesheet" href="/home/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link rel="stylesheet" href="/home/assets/css/home.css">
 
     <title>Wine2U</title>
 </head>
@@ -18,10 +21,10 @@
 <body id="home" class="scrollspy">
     <!-- Navbar -->
     <div class="navbar-fixed">
-        <nav class="teal">
+        <nav class="black">
             <div class="container">
                 <div class="nav-wrapper">
-                    <a href="#home" class="brand-logo">Wine2U</a>
+                    <a href="#home" class="brand-logo"><img src="assets/images/2/logo.jpg"></a>
                     <a href="#" data-target="mobile-nav" class="sidenav-trigger">
                         <i class="material-icons">menu</i>
                     </a>
@@ -29,7 +32,7 @@
                         <li>
                             <a href="#!"><i class="material-icons">shopping_cart</i></a></li>
                         <li>
-                            <a class="dropdown-trigger btn" href="#" data-target="dropdown1">Menu</a>
+                            <a class='dropdown-trigger btn red darken-3' href='#' data-target='dropdown1'>Menu</a>
                         </li>
                     </ul>
                 </div>
@@ -38,12 +41,12 @@
     </div>
 
     <!-- dropdown-->
-    <ul id="dropdown1" class="dropdown-content">
-        <li><a href="/Subscription/sub.html"><i class="material-icons">add_circle_outline</i>Subscribe</a></li>
-        <li><a href="/register-login/content-page.html"><i class="material-icons">fingerprint</i>Login / Registrate Account</a></li>
-        <li><a href="/about us/"><i class="material-icons">tag_faces</i>About Us</a></li>
-        <li><a href="#Contact"><i class="material-icons">contacts</i>Contact Us</a></li>
-        <li><a href="#"><i class="fab fa-facebook-square"></i><i class="fab fa-twitter-square"></i><i class="fab fa-instagram"></i></a></li>
+
+    <ul id='dropdown1' class='dropdown-content'>
+        <li><a class="red-text" href="/Subscription/sub.html"><i class="material-icons">add_circle_outline</i>Subscribe</a></li>
+        <li><a class="red-text" href="/register-login/content-page.html"><i class="material-icons">fingerprint</i>Login / Registrate Account</a></li>
+        <li><a class="red-text" href="/about us/"><i class="material-icons">tag_faces</i>About Us</a></li>
+        <li><a class="red-text" href="#Contact"><i class="material-icons">contacts</i>Contact Us</a></li>
     </ul>
 
     <!-- Sidenav-->
@@ -58,212 +61,153 @@
             <a href="#popular">Contact Us</a>
         </li>
         <li>
-            <a href="#gallery">About Us</a>
+            <a href="#aboutus">About Us</a>
         </li>
         <li>
             <a href="#contact">Social Media</a>
         </li>
     </ul>
 
+    <!--Floating Action Button-->
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating btn-large blue darken-4" href="www.facebook.com"><i class="large fab fa-facebook-square">Facebook</i></a></li>
+            <li><a class="btn-floating btn-large blue lighten-3" href "www.twitter.com"><i class="large fab fa-twitter-square">Twitter</i></a></li>
+            <li><a class="btn-floating btn-large brown" href="www.instgram.com"><i class="large fab fa-instagram">Instagram</i></a></li>
+        </ul>
+    </div>
+
     <!-- Section: Slider -->
     <section class="slider">
         <ul class="slides">
             <li>
-                <img class="center" src="/home/assets/banner/1/1.jpeg">
+                <img class="center" src="/home/assets/images/1/1.jpeg">
                 <!-- random image -->
                 <div class="caption center-align">
-                    <h2 class="black-text">Enjoy Wine without the hassle</h2>
-                    <h4 class="light black-text text-lighten-3 hide-on-small-only">Tried of going everywhere to search for the wine that fits your taste?</h4>
+                    <h1 class="white-text">Enjoy Wine without the hassle</h1>
+                    <h2 class="light white-text text-lighten-3 hide-on-small-only">Tried of going everywhere to search for the wine that fits your taste?</h2>
+                    <br><br><a class="get btn-large waves-effect waves-light red darken-3">Let's Start The Journey!</a>
                 </div>
             </li>
             <li>
-                <img class="center" src="/home/assets/banner/1/2.jpeg">
+                <img class="center" src="/home/assets/images/1/2.jpeg">
                 <!-- random image -->
                 <div class="caption center-align">
-                    <h2 class="black-text">Premium quality wine at your fingertips</h2>
-                    <h5 class="light black-text text-lighten-3 hide-on-small-only">You don"t have to go everywhere looking for what you want!</h5>
+
+                    <h1 class="white-text">Premium quality wine at your fingertips</h1>
+                    <h2 class="light white-text text-lighten-3 hide-on-small-only">You don't have to go everywhere looking for what you want!</h2>
+                    <br><br><a class="get btn-large waves-effect waves-light red darken-3">Let's Start The Journey!</a>
                 </div>
             </li>
             <li>
-                <img class="center" src="/home/assets/banner/1/3.jpg">
+                <img class="center" src="/home/assets/images/1/3.jpg">
                 <!-- random image -->
                 <div class="caption center-align">
-                    <h2 class="black-text">Want to feel elegent at a low cost?</h2>
-                    <h5 class="light black-text text-lighten-3 hide-on-small-only">Don"t need to be rich brat to enjoy something</h5>
+
+                    <h1 class="white-text">Want to feel elegent at a low cost?</h1>
+                    <h2 class="light white-text text-lighten-3 hide-on-small-only">Don't need to be rich brat to enjoy something</h2>
+                    <br><br><a class="get btn-large waves-effect waves-light red darken-3">Let's Start The Journey!</a>
                 </div>
             </li>
         </ul>
-    </section>
+    </section> <br><br>
 
-    <!-- Section: Search -->
-    <section class="section section-search teal darken-1 white-text center scrollspy">
+    <!--Section: About Us-->
+    <section id="aboutus" class="center-align">
         <div class="container">
-            <div class="row">
-                <div class="col s12">
-                    <h3>Take the test and see what we have for you</h3>
-                    <div>
-                        <a class="waves-effect waves-light btn-large">Click Me!</a>
-                    </div>
-                </div>
+            <h3>About Us</h3>
+            <p>Wine2U was founded in 2018 because of a shared belief that wine should be more accessible: simpler to get and easier to enjoy. We offers personalized tasting plans, where customers can appreciate the wines and talk to staff for specific information
+                and advice. All staff undergo the internationally recognised Wine and Spirit Education Trust (W.S.E.T.) wine training - so when they recommend a wine, they've tasted it and know its background. And if they don't have specific information,
+                they will find out.</p>
+        </div>
+
+
+
+    </section><br><br><br>
+
+    <!--Breakline-->
+    <div class=" container divider white">
+    </div><br><br><br>
+
+    <section id="features" class="container">
+        <div class="row">
+
+            <div class="col l7 m6 s12 center">
+                <img class="images" src="assets/images/2/discover.jpeg">
+            </div>
+
+
+            <div class="col l5 m6 s12 right-align">
+                <h4>Discover your favorites.</h4>
+                <p>We have many styles of wine to discover. Completely suit your taste well</p>
+
             </div>
         </div>
-    </section>
 
-    <!-- Section: Icon Boxes -->
-    <section class="section section-icons grey lighten-4 center">
-        <div class="container">
-            <div class="row">
-                <div class="col s12 m4">
-                    <div class="card-panel">
-                        <i class="material-icons large teal-text">assignment</i>
-                        <h4>1. Take the test</h4>
-                        <p>Answer couple question for us recommend the best wine we have!</p>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card-panel">
-                        <i class="material-icons large teal-text">local_shipping</i>
-                        <h4>2. Choose Your Plan</h4>
-                        <p>Choose the plan that you like and input your address to get the items delivered!</p>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card-panel">
-                        <i class="material-icons large teal-text">insert_emoticon</i>
-                        <h4>3. Enjoy</h4>
-                        <p>Sit back, relax and enjoy your wine either by yourself during night time or with your friends and love ones on special days!</p>
-                    </div>
-                </div>
+        <div class="row mobile">
+            <div class="col l7 m6 s12">
+                <h4>We Deliver</h4>
+                <p>Each month’s selection is sent straight to your door. Wine delivery has been known to create great amounts of joy.</p>
+            </div>
+            <div class="col l5 m6 s12">
+                <img class="images" src="assets/images/2/deliver.png">
             </div>
         </div>
+        <div class="row">
+
+            <div class="col l7 m6 s12">
+                <img class="images" src="assets/images/2/cheers.jpg">
+            </div>
+            <div class="col l5 m6 s12">
+                <h4>Cheers!</h4>
+                <p>We send you numerous wines at a time as ordered - basically a party in a box.</p>
+
+            </div>
+        </div>
+
+
+
+
+
     </section>
+
+
+
+
+
+
+
 
     <!-- Section: Popular Places -->
-    <section id="popular" class="section section-popular scrollspy">
+
+
+    <!-- Section: Icon Boxes -->
+    <section id="process" class="section section-icons black lighten-4 center">
         <div class="container">
             <div class="row">
-                <h4 class="center">
-                    <span class="teal-text">Popular</span> Recommendations</h4>
                 <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="/home/assets/banner/2/first-wine.jpg" alt="">
-                        </div>
-                        <div class="card-content">
-                            From vines between 30 and 50 years old, and aged in barrels for 16 months. Attractive collection of balsamic notes, chocolate and black fruits, a modern-style wine with huge fruit, big body.</div>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="/home/assets/banner/2/second-wine.jpg" alt="">
-                        </div>
-                        <div class="card-content">
-                            A candidate for perfection with a few more years of bottle age, this great vintage of Angelus has gorgeous nose of incense, graphite, blackberry liqueur, truffles and spring flowers. </div>
+                    <div class="card-panel black">
+                        <i class="material-icons large white-text">assignment</i>
+                        <h5 class="white-text">1. Take the test</h5>
+                        <p class="white-text"> Answer couple question for us recommend the best wine we have!</p>
+
                     </div>
                 </div>
                 <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="/home/assets/banner/2/third-wine.jpg" alt="">
-                        </div>
-                        <div class="card-content">
-                            The 2013 Aquilón is a selection of the best plots of vines as well as the best Garnacha barrels in the cellar, produced as an intense blending exercise. </div>
+                    <div class="card-panel black">
+                        <i class="material-icons large white-text">local_shipping</i>
+                        <h5 class="white-text">2. Choose Your Plan</h5>
+                        <p class="white-text">Choose the plan that you like and input your address to get the items delivered!</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Section: Gallery -->
-    <section id="gallery" class="section section-gallery scrollspy">
-        <div class="container">
-            <h4 class="center">
-                <span class="teal-text">Photo</span> Gallery
-            </h4>
-            <div class="row">
-                <div class="col s12 m3">
-                    <img src="https://source.unsplash.com/1600x900/?beach" alt="" class="materialboxed responsive-img">
-                </div>
-                <div class="col s12 m3">
-                    <img src="https://source.unsplash.com/1600x900/?travel" alt="" class="materialboxed responsive-img">
-                </div>
-                <div class="col s12 m3">
-                    <img src="https://source.unsplash.com/1600x900/?nature" alt="" class="materialboxed responsive-img">
-                </div>
-                <div class="col s12 m3">
-                    <img src="https://source.unsplash.com/1600x900/?beach, travel" alt="" class="materialboxed responsive-img">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12 m3">
-                    <img src="https://source.unsplash.com/1600x900/?water" alt="" class="materialboxed responsive-img">
-                </div>
-                <div class="col s12 m3">
-                    <img src="https://source.unsplash.com/1600x900/?building" alt="" class="materialboxed responsive-img">
-                </div>
-                <div class="col s12 m3">
-                    <img src="https://source.unsplash.com/1600x900/?trees" alt="" class="materialboxed responsive-img">
-                </div>
-                <div class="col s12 m3">
-                    <img src="https://source.unsplash.com/1600x900/?cruise" alt="" class="materialboxed responsive-img">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col s12 m3">
-                    <img src="https://source.unsplash.com/1600x900/?beaches" alt="" class="materialboxed responsive-img">
-                </div>
-                <div class="col s12 m3">
-                    <img src="https://source.unsplash.com/1600x900/?traveling" alt="" class="materialboxed responsive-img">
-                </div>
-                <div class="col s12 m3">
-                    <img src="https://source.unsplash.com/1600x900/?bridge" alt="" class="materialboxed responsive-img">
-                </div>
-                <div class="col s12 m3">
-                    <img src="https://source.unsplash.com/1600x900/?beach, travel,boat" alt="" class="materialboxed responsive-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section: Contact -->
-    <section id="contact" class="section section-contact scrollspy">
-        <div class="container">
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card-panel teal white-text center">
-                        <i class="material-icons">email</i>
-                        <h5>Contact Us For Enquiry</h5>
-                        <p>Got any questions? Want to know more about us? Wnat to get in touch with us? Send an email and we will reply in 1 day time.</p>
-                    </div>
-                    <ul class="collection with-header">
-                        <li class="collection-header">
-                            <h4>Location</h4>
-                        </li>
-                        <li class="collection-item">Wine2U Corporation</li>
-                        <li class="collection-item">Someplace, Someplace</li>
-                        <li class="collection-item">Yau Ma Tei, Hong Kong</li>
-                    </ul>
-                </div>
-                <div class="col s12 m6">
-                    <div class="card-panel grey lighten-3">
-                        <h5>Please fill out this form</h5>
-                        <div class="input-field">
-                            <input type="text" placeholder="Name">
-                        </div>
-                        <div class="input-field">
-                            <input type="text" placeholder="Email">
-                        </div>
-                        <div class="input-field">
-                            <input type="text" placeholder="Phone">
-                        </div>
-                        <div class="input-field">
-                            <textarea class="materialize-textarea" placeholder="Enter Message"></textarea>
-                        </div>
-                        <input type="submit" value="Submit" class="btn">
+                <div class="col s12 m4">
+                    <div class="card-panel black">
+                        <i class="material-icons large white-text">insert_emoticon</i>
+                        <h5 class="white-text">3. Enjoy</h5>
+                        <p class="white-text">Sit back, relax and enjoy it during night time or with your friends and love!</p>
                     </div>
                 </div>
             </div>
@@ -271,8 +215,32 @@
     </section>
 
     <!-- Footer -->
-    <footer class="section teal darken-2 white-text center">
-        <p class="flow-text">Wine2U @ 2018 </p>
+    <footer class="page-footer black">
+        <div class="container">
+            <div class="row">
+                <div class="divider"></div>
+                <div class="col l6 s6">
+                    <h6 class="white-text">Contact Us! </h6>
+                    <p class="grey-text text-lighten-4">Tel: 2663 9993</p>
+                    <p class="grey-text text-lighten-4">Email: <a href: "mailto:enquiry@winetoyou.com">enquiry@winetoyou.com</a> </p>
+                    <p class="grey-text text-lighten-4">Address: Hong Kong</p>
+                </div>
+                <div class="col l4 offset-l2 s6">
+                    <h6 class="white-text">Here to help</h6>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Terms</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Connect Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 Copyright reserved by Wine To You Global Ltd
+
+            </div>
+        </div>
     </footer>
 
     <!--JavaScript at end of body for optimized loading-->
@@ -301,6 +269,12 @@
             hover: true,
             constrainWidth: false
         });
+
+        // Floating Action Button
+        $(document).ready(function() {
+            $('.fixed-action-btn').floatingActionButton();
+        });
+
 
 
         // Material Boxed
