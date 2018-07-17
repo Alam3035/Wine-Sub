@@ -1,0 +1,91 @@
+html {
+    background: #000000;
+    color: #ffffff;
+}
+
+h1 {
+    font-family: 'Philosopher', sans-serif;
+}
+
+
+h2 {
+    font-size: 4vh;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+h3{
+    font-family: 'Philosopher', sans-serif;
+}
+
+h4{
+    font-family: 'Philosopher', sans-serif;
+}
+
+.get {
+
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+#aboutus p{
+
+    font-family: 'Cinzel', serif;
+}
+
+#features p{
+
+    font-family: 'Cinzel', serif;
+}
+
+#process p{
+    font-family: 'Cinzel', serif;
+}
+
+footer p{
+    font-family: 'Cinzel', serif;
+}
+
+footer a{
+    font-family: 'Cinzel', serif;
+}
+
+.images{ 
+
+    background-color: #ffffff;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+
+}
+
+
+
+.section section-icons black lighten-4 center p{
+
+    color: red;
+    font-size: 1vh;
+
+}
+
+h5{
+    font-size: 4vh;
+    font-family: 'Philosopher', sans-serif;
+}
+
+h6{
+    font-family:'Philosopher', sans-serif;
+}
+
+@media only screen and (max-width: 600px){
+    .mobile {
+
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    h4{
+        text-align: center;
+    }
+}
