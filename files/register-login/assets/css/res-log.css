@@ -11,35 +11,36 @@ body {
     flex-direction: column;
 }
 
+nav {
+    font-family: 'Philosopher', sans-serif;
+}
+
 main {
     flex: 1 0 auto;
   }
+
+
+.card {
+    background: rgba(0, 0, 0, .6);
+    border-color: white;
+    border-style: groove;
+}
 
 .login {
     margin-top: 100px;
 }
 
-.card {
-    background: rgba(0, 0, 0, .6);
-}
 
 .label {
     font-size: 16px;
-    color: #ccc;
+    color: #ffffff;
 }
 
 /* footer */ 
-footer p {
+footer  {
     font-family: 'Cinzel', serif;
 }
 
-footer a {
-    font-family: 'Cinzel', serif;
-}
-
-.footer-copyright center-align {
-    font-family: 'Cinzel', serif;
-  }
 
 /* social media icons*/ 
 
