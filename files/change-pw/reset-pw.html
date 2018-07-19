@@ -16,11 +16,13 @@
 </head>
 
 <body id="home" class="scrollspy">
+
+    <!-- Navbar -->
     <div class="navbar-fixed">
-        <nav class="teal">
+        <nav class="black">
             <div class="container">
                 <div class="nav-wrapper">
-                    <a href="#home" class="brand-logo">Wine2U</a>
+                    <a href="#home" class="brand-logo"><img src="asssets/img/logo.jpg"></a>
                     <a href="#" data-target="mobile-nav" class="sidenav-trigger">
                         <i class="material-icons">menu</i>
                     </a>
@@ -28,7 +30,7 @@
                         <li>
                             <a href="#!"><i class="material-icons">shopping_cart</i></a></li>
                         <li>
-                            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Menu</a>
+                            <a class='dropdown-trigger btn red darken-3' href='#' data-target='dropdown1'>Menu</a>
                         </li>
                     </ul>
                 </div>
@@ -38,11 +40,11 @@
 
     <!-- dropdown-->
     <ul id='dropdown1' class='dropdown-content'>
-        <li><a href="/Subscription/sub.html"><i class="material-icons">add_circle_outline</i>Subscribe</a></li>
-        <li><a href="/register-login/content-page.html"><i class="material-icons">fingerprint</i>Login / Registrate Account</a></li>
-        <li><a href="#!"><i class="material-icons">tag_faces</i>About Us</a></li>
-        <li><a href="#"><i class="material-icons">contacts</i>Contact Us</a></li>
-        <li><a href="#!"><i class="fab fa-facebook-square"></i><i class="fab fa-twitter-square"></i><i class="fab fa-instagram"></i></a></li>
+        <li><a class="red-text" href="/Subscription/sub.html"><i class="material-icons">add_circle_outline</i>Subscribe</a></li>
+        <li><a class="red-text" href="/register-login/content-page.html"><i class="material-icons">fingerprint</i>Login / Registrate Account</a></li>
+        <li><a class="red-text" href="/about us/"><i class="material-icons">tag_faces</i>About Us</a></li>
+        <li><a class="red-text" href="#Contact"><i class="material-icons">contacts</i>Contact Us</a></li>
+
     </ul>
 
     <!-- Sidenav-->
@@ -57,46 +59,84 @@
             <a href="#popular">Contact Us</a>
         </li>
         <li>
-            <a href="#gallery">About Us</a>
+            <a href="#aboutus">About Us</a>
         </li>
         <li>
             <a href="#contact">Social Media</a>
         </li>
     </ul>
-    <br><br>
-    <!-- form -->
-    <div class="row">
-        <div class="col s12 m4 14 offset-m4">
-            <div class="card">
-                <div class="card-action teal white-text">
-                    <h4>Reset Password</h4>
-                </div>
 
-                <div class="card-content">
-                    <div class="input-field">
-                        <label for="username">Username</label>
-                        <input type="text" id="username">
+    <!--Floating Action Button-->
+    <div class="fixed-action-btn">
+            <a class="btn-floating btn-large red">
+              <i class="large material-icons">mode_edit</i>
+            </a>
+            <ul>
+              <li><a class="btn-floating btn-large blue darken-4" href="www.facebook.com"><i class="large fab fa-facebook-square">Facebook</i></a></li>
+              <li><a class="btn-floating btn-large blue lighten-3" href"www.twitter.com"><i class="large fab fa-twitter-square">Twitter</i></a></li>
+              <li><a class="btn-floating btn-large brown" href="www.instgram.com"><i class="large fab fa-instagram">Instagram</i></a></li>
+            </ul>
+          </div>
+    
+    <main>
+        <!-- form -->
+        <div class="row">
+            <div class="col s12 m4 14 offset-m4">
+                <div class="card">
+                    <div class="card-action black white-text">
+                        <h4>Reset Password</h4>
                     </div>
-                    <div class="input-field">
-                        <label for="password">New Password</label>
-                        <input type="password" id="password">
-                    </div>
-                    <div class="input-field">
-                        <label for="password">Repeat Password</label>
-                        <input type="password" id="repeat-password">
-                    </div>
-                    <div class="form-field center-align">
-                        <button class="btn-large waves-effect waves-green red">Reset</button>
+
+                    <div class="card-content">
+                        <div class="input-field">
+                            <label for="username">Username</label>
+                            <input type="text" id="username">
+                        </div>
+                        <div class="input-field">
+                            <label for="password">New Password</label>
+                            <input type="password" id="password">
+                        </div>
+                        <div class="input-field">
+                            <label for="password">Confirm Password</label>
+                            <input type="password" id="repeat-password">
+                        </div>
+                        <div class="form-field center-align">
+                            <button class="btn-large waves-effect waves-green red darken-3">Okie</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <br><br>
+    </main>
+
     <!-- Footer -->
-    <footer class="section teal darken-2 white-text center">
-        <p class="flow-text">Wine2U &copy; 2018 </p>
-    </footer>
+        <footer class="page-footer black">
+            <div class="container">
+            <div class="row">
+                <div class="divider"></div>
+                <div class="col l6 s6">
+                <h6 class="white-text">Contact Us! </h6>
+                <p class="grey-text text-lighten-4">Tel: 2663 9993</p>
+                <p class="grey-text text-lighten-4">Email: <a href:"mailto:enquiry@winetoyou.com">enquiry@winetoyou.com</a>  </p>
+                <p class="grey-text text-lighten-4">Address: Hong Kong</p>
+                </div>
+                <div class="col l4 offset-l2 s6">
+                <h6 class="white-text">Here to help</h6>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Terms</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Connect Us</a></li>
+                </ul>
+                </div>
+            </div>
+            </div>
+            <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright reserved by Wine To You Global Ltd
+
+            </div>
+            </div>
+        </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -111,14 +151,10 @@
         const sideNav = document.querySelector('.sidenav');
         M.Sidenav.init(sideNav, {});
 
-        // Slider
-        const slider = document.querySelector('.slider');
-        M.Slider.init(slider, {
-            indicators: false,
-            height: 600,
-            transition: 500,
-            interval: 6000
-        });
+        // Floating Action Button
+        $(document).ready(function(){
+            $('.fixed-action-btn').floatingActionButton();
+             });
 
         // Dropdown
         $('.dropdown-trigger').dropdown({

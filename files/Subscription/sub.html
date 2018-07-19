@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/sub.css">
 
-    <title>Wine To you</title>
+    <title>Wine To You</title>
 </head>
 
 <body id="home" class="scrollspy">
@@ -67,15 +67,16 @@
 
     <!--Floating Action Button-->
     <div class="fixed-action-btn">
-            <a class="btn-floating btn-large red">
-              <i class="large material-icons">mode_edit</i>
-            </a>
-            <ul>
-              <li><a class="btn-floating btn-large blue darken-4" href="www.facebook.com"><i class="large fab fa-facebook-square">Facebook</i></a></li>
-              <li><a class="btn-floating btn-large blue lighten-3" href"www.twitter.com"><i class="large fab fa-twitter-square">Twitter</i></a></li>
-              <li><a class="btn-floating btn-large brown" href="www.instgram.com"><i class="large fab fa-instagram">Instagram</i></a></li>
-            </ul>
-          </div>
+        <a class="btn-floating btn-large red">
+          <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+          <li><a class="btn-floating btn-large blue darken-4" href="www.facebook.com"><i class="large fab fa-facebook-square">Facebook</i></a></li>
+          <li><a class="btn-floating btn-large blue lighten-3" href"www.twitter.com"><i class="large fab fa-twitter-square">Twitter</i></a></li>
+          <li><a class="btn-floating btn-large brown" href="www.instgram.com"><i class="large fab fa-instagram">Instagram</i></a></li>
+        </ul>
+      </div>
+
 
     <section>
         <div class="title-top center">
@@ -197,6 +198,11 @@
             constrainWidth: false
         });
 
+        //floating action btn
+        $(document).ready(function(){
+            $('.fixed-action-btn').floatingActionButton();
+        });
+
         // Material Boxed
         const mb = document.querySelectorAll(".materialboxed");
         M.Materialbox.init(mb, {});
@@ -204,6 +210,8 @@
         // ScrollSpy
         const ss = document.querySelectorAll(".scrollspy");
         M.ScrollSpy.init(ss, {});
+
+
     </script>
 </body>
 
