@@ -11,6 +11,7 @@ body {
 
   main {
     flex: 1 0 auto;
+    /* padding-top:50px; */
   }
 
   .slider .slides li img{
@@ -64,17 +65,9 @@ h4 {
 }
 
 /* footer */ 
-footer p {
+footer  {
     font-family: 'Cinzel', serif;
 }
-
-footer a {
-    font-family: 'Cinzel', serif;
-}
-
-.footer-copyright center-align {
-    font-family: 'Cinzel', serif;
-  }
 
   /* social media icons*/ 
 
