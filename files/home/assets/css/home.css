@@ -16,6 +16,9 @@ body {
   .slider .slides li img{
     opacity: 0.35;
 }
+nav {
+    font-family: 'Philosopher', sans-serif;
+}
 
 h1 {
     font-family: 'Philosopher', sans-serif;
@@ -32,21 +35,6 @@ h3 {
 
 h4 {
     font-family: 'Philosopher', sans-serif;
-}
-
-.fa-facebook {
-    font-size: 40px;
-    color: #FFFFFF;
-}
-
-.fa-twitter {
-    font-size: 40px;
-    color: #FFFFFF;
-}
-
-.fa-instagram {
-    font-size: 40px;
-    color: #FFFFFF;
 }
 
 .get {
@@ -75,12 +63,34 @@ h4 {
     font-family: 'Cinzel', serif;
 }
 
+/* footer */ 
 footer p {
     font-family: 'Cinzel', serif;
 }
 
 footer a {
     font-family: 'Cinzel', serif;
+}
+
+.footer-copyright center-align {
+    font-family: 'Cinzel', serif;
+  }
+
+  /* social media icons*/ 
+
+.fa-facebook {
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+.fa-twitter {
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+.fa-instagram {
+    font-size: 40px;
+    color: #FFFFFF;
 }
 
 .images {

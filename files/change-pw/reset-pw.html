@@ -8,6 +8,9 @@
     <!-- css stuffs-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="asssets/css/pw.css">
 
@@ -17,20 +20,23 @@
 
 <body id="home" class="scrollspy">
 
-    <!-- Navbar -->
-    <div class="navbar-fixed">
+   <!-- Navbar -->
+   <div class="navbar-fixed">
         <nav class="black">
             <div class="container">
                 <div class="nav-wrapper">
-                    <a href="#home" class="brand-logo"><img src="asssets/img/logo.jpg"></a>
+                    <a href="/home/index.html" class="brand-logo"><img src="/home/assets/images/2/logo.jpg"></a>
                     <a href="#" data-target="mobile-nav" class="sidenav-trigger">
                         <i class="material-icons">menu</i>
                     </a>
                     <ul class="right hide-on-med-and-down">
                         <li>
-                            <a href="#!"><i class="material-icons">shopping_cart</i></a></li>
+                            <a href="/register-login/content-page.html">Sign In</a>
+                        </li>
                         <li>
-                            <a class='dropdown-trigger btn red darken-3' href='#' data-target='dropdown1'>Menu</a>
+                            <a href="/Subscription/sub.html">Start The Journey</a></li>
+                        <li>
+                            <a class="dropdown-trigger btn red darken-3" href="#" data-target="dropdown1">Menu</a>
                         </li>
                     </ul>
                 </div>
@@ -39,12 +45,12 @@
     </div>
 
     <!-- dropdown-->
-    <ul id='dropdown1' class='dropdown-content'>
+
+    <ul id="dropdown1" class="dropdown-content">
         <li><a class="red-text" href="/Subscription/sub.html"><i class="material-icons">add_circle_outline</i>Subscribe</a></li>
         <li><a class="red-text" href="/register-login/content-page.html"><i class="material-icons">fingerprint</i>Login / Registrate Account</a></li>
-        <li><a class="red-text" href="/about us/"><i class="material-icons">tag_faces</i>About Us</a></li>
-        <li><a class="red-text" href="#Contact"><i class="material-icons">contacts</i>Contact Us</a></li>
-
+        <li><a class="red-text" href="#about-us"><i class="material-icons">tag_faces</i>About Us</a></li>
+        <li><a class="red-text" href="#contact"><i class="material-icons">contacts</i>Contact Us</a></li>
     </ul>
 
     <!-- Sidenav-->
@@ -56,28 +62,19 @@
             <a href="/register-login/content-page.html">Login/Registration</a>
         </li>
         <li>
-            <a href="#popular">Contact Us</a>
+            <a href="#contact">Contact Us</a>
         </li>
         <li>
-            <a href="#aboutus">About Us</a>
-        </li>
-        <li>
-            <a href="#contact">Social Media</a>
+            <a href="#about-us">About Us</a>
         </li>
     </ul>
 
     <!--Floating Action Button-->
     <div class="fixed-action-btn">
-            <a class="btn-floating btn-large red">
-              <i class="large material-icons">mode_edit</i>
-            </a>
-            <ul>
-              <li><a class="btn-floating btn-large blue darken-4" href="www.facebook.com"><i class="large fab fa-facebook-square">Facebook</i></a></li>
-              <li><a class="btn-floating btn-large blue lighten-3" href"www.twitter.com"><i class="large fab fa-twitter-square">Twitter</i></a></li>
-              <li><a class="btn-floating btn-large brown" href="www.instgram.com"><i class="large fab fa-instagram">Instagram</i></a></li>
-            </ul>
-          </div>
-    
+        <a href="#home" class="btn-floating btn-large red">
+            <i class="large material-icons">arrow_upward</i>
+        </a>
+    </div>
     <main>
         <!-- form -->
         <div class="row">
@@ -110,31 +107,38 @@
     </main>
 
     <!-- Footer -->
-        <footer class="page-footer black">
-            <div class="container">
-            <div class="row">
-                <div class="divider"></div>
-                <div class="col l6 s6">
-                <h6 class="white-text">Contact Us! </h6>
-                <p class="grey-text text-lighten-4">Tel: 2663 9993</p>
-                <p class="grey-text text-lighten-4">Email: <a href:"mailto:enquiry@winetoyou.com">enquiry@winetoyou.com</a>  </p>
-                <p class="grey-text text-lighten-4">Address: Hong Kong</p>
+    <footer class="page-footer black " id="contact">
+            <div class="center-align">
+                <div class="row ">
+                    <div class="divider"></div><br>
+                        <div class="container">
+                            <div class="col l6 s6 left-align">
+                                <h6 class="white-text ">Contact Us! </h6>
+                                <p class="grey-text text-lighten-4 ">Tel: 2663 9993</p>
+                                <p class="grey-text text-lighten-4 ">Email: <a href: "mailto:enquiry@winetoyou.com ">enquiry@winetoyou.com</br> </p>
+                                <p class="grey-text text-lighten-4 ">Address: Hong Kong</p>
+                            </div>
+                            <div class="col l4 offset-l1 s6">
+                                    <h6 class="white-text ">Social Media Connections</h6><br>
+                                    <div class="col s4 m4 l3 offset-l2 center-align">
+                                            <a href=" https://www.facebook.com/husnan.alam " target="_blank "><i class="fab fa-facebook "></i></a>
+                                </div>
+                                <div class="col s4 m4 l3 center-align">
+                                    <a href="https://www.instagram.com/alam3035/ " target="_blank "><i class="fab fa-instagram "></i></a>
+                                </div>
+                                <div class="col s4 m4 l3 center-align">
+                                    <a href="https://www.linkedin.com/in/alamhusnan/ " target="_blank "><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
                 </div>
-                <div class="col l4 offset-l2 s6">
-                <h6 class="white-text">Here to help</h6>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Terms</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Connect Us</a></li>
-                </ul>
+            </div>
+    
+            <!--copyright-->
+            <div class="footer-copyright center-align">
+                <div class="container ">
+                    © 2018 Copyright reserved by Wine To You Global Ltd
                 </div>
-            </div>
-            </div>
-            <div class="footer-copyright">
-            <div class="container">
-            © 2018 Copyright reserved by Wine To You Global Ltd
-
-            </div>
             </div>
         </footer>
 

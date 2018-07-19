@@ -1,17 +1,55 @@
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+html{
+  background-color:#000000;
+  color: #ffffff;
+} 
 
-  main {
-    flex: 1 0 auto;
-  }
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+nav {
+  font-family: 'Philosopher', sans-serif;
+}
+
+main {
+  flex: 1 0 auto;
+}
 
 img {
 
     max-height:200px;
     max-width:200px;
 }
+
+/* footer */ 
+footer p {
+  font-family: 'Cinzel', serif;
+}
+
+footer a {
+  font-family: 'Cinzel', serif;
+}
+
+.footer-copyright center-align {
+  font-family: 'Cinzel', serif;
+}
  
+/* social media icons*/ 
+
+.fa-facebook {
+  font-size: 40px;
+  color: #FFFFFF;
+}
+
+.fa-twitter {
+  font-size: 40px;
+  color: #FFFFFF;
+}
+
+.fa-instagram {
+  font-size: 40px;
+  color: #FFFFFF;
+}
   
