@@ -5,14 +5,33 @@ body {
     flex-direction: column;
 
 }
+nav {
+    font-family: 'Philosopher', sans-serif;
+}
+
 
 main {
     flex: 1 0 auto;
 }
 
-nav {
-    font-family: 'Philosopher', sans-serif;
+.card{
+    background-color: #000000;
+    border-style: groove;
+    border-color:white;
 }
+
+
+
+/* gallery */
+
+
+
+
+/* gallery end */
+
+
+
+
 
 /* footer */
 
@@ -45,3 +64,5 @@ footer a {
     font-size: 40px;
     color: #FFFFFF;
 }
+
+

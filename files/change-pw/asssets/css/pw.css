@@ -35,14 +35,10 @@ body {
 }
 
 /* footer */
-footer p {
+footer {
   font-family: 'Cinzel', serif;
 }
 
-footer a {
-  font-family: 'Cinzel', serif;
-}
-
-.footer-copyright center-align.container {
+.card {
   font-family: 'Cinzel', serif;
 }
