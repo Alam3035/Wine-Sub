@@ -22,13 +22,22 @@ main {
 
 
 
+
+
 /* gallery */
 
+.slider{
+    background: transparent;
+}
 
+.des {
 
+    font-family:'Cinzel', serif;
+}
 
-/* gallery end */
-
+.card {
+    border-color: red !important;
+}
 
 
 
