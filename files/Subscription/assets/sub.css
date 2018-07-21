@@ -19,11 +19,24 @@ main {
 
 }
 
+/* Choices */
+
 .card{
     border: groove;
     border-color: red !important;
     font-family: 'Cinzel', serif;
 }
+
+.card-title{
+    font-size: 5vh !important;
+}
+
+.card-content li{
+    font-size: 19px;
+}
+
+
+
 
 
 
