@@ -33,18 +33,29 @@ main {
 .des {
 
     font-family:'Cinzel', serif;
+    font-size: 19px;
 }
 
 .card {
     border-color: red !important;
 }
 
+/* choices */
+.card span {
+
+    font-family: 'Cinzel', serif;
+}
+
+.card ul{
+    font-family: 'Cinzel', serif;
+}
 
 
 
 /* footer */
 
 footer p {
+
     font-family: 'Cinzel', serif;
 }
 
