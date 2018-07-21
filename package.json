@@ -1,0 +1,35 @@
+{
+  "name": "wine-sub",
+  "version": "1.0.0",
+  "description": "Wine Subscription Website",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.2.0",
+    "knex": "^0.15.2",
+    "node-pre-gyp": "^0.10.3",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
+    "pg": "^7.4.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alam3035/Wine-Sub.git"
+  },
+  "author": "Alam, Benjamin, Marco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alam3035/Wine-Sub/issues"
+  },
+  "homepage": "https://github.com/Alam3035/Wine-Sub#readme"
+}
