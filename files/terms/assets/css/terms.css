@@ -5,49 +5,14 @@ body {
     flex-direction: column;
 
 }
-nav {
-    font-family: 'Philosopher', sans-serif;
-}
-
 
 main {
     flex: 1 0 auto;
 }
 
-.card{
-    background-color: #000000;
-    border-style: groove;
-    border-color:white;
-}
-
-
-
-
-
-/* gallery */
-
-.slider{
-    background: transparent;
-}
-
-.des {
-
-    font-family:'Cinzel', serif;
-    font-size: 19px;
-}
-
-.card {
-    border-color: red !important;
-}
-
-/* choices */
-.card span {
-
-    font-family: 'Cinzel', serif;
-}
-
-.card ul{
-    font-family: 'Cinzel', serif;
+/* navbar */
+nav {
+    font-family: 'Philosopher', sans-serif;
 }
 
 
@@ -84,5 +49,3 @@ footer a {
     font-size: 40px;
     color: #FFFFFF;
 }
-
-
