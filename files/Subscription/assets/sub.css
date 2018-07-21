@@ -19,9 +19,22 @@ main {
 
 }
 
+.card{
+    border: groove;
+    border-color: red !important;
+    font-family: 'Cinzel', serif;
+}
+
 
 
 /* footer */
+
+h3{
+
+    font-family: 'Cinzel', serif;
+    font-size: 3vh;
+
+}
 
 footer p {
 
