@@ -17,16 +17,31 @@ nav {
     font-family: 'Philosopher', sans-serif;
 }
 
+.card {
+    font-family: 'Cinzel', serif;
+    border: groove;
+    border-color: #ffffff;
+}
+
+.card span{
+    font-size: 6vh !important;
+}
+
+.pbs{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sob{
+    font-family: 'Cinzel', serif;
+}
+
 /* footer */ 
-footer p {
+h6{
     font-family: 'Cinzel', serif;
+    font-size: 3vh; 
 }
-
-footer a {
-    font-family: 'Cinzel', serif;
-}
-
-.footer-copyright center-align {
+footer {
     font-family: 'Cinzel', serif;
   }
 
