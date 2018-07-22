@@ -1,65 +1,83 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-const bcrypt = require('../bcrypt')
+require('dotenv').config();
 
-module.exports = (passport, knex) => {
+const NODE_ENV = process.env.NODE_ENV || 'development'
+const knexFile = require('../../knexfile')[NODE_ENV]
+const knex = require('knex')(knexFile)
+
+const bcrypt = require('../bcrypt.js');
+
+
+module.exports = (app) => {
+    app.use(passport.initialize());
+    app.use(passport.session());
+
+    passport.use('local-signup', new LocalStrategy({
+            passReqToCallback: true
+        },
+        async(req, email, password, done) => {
+            try {
+                let users = await knex('users').where({
+                    email: email
+                });
+                if (users.length > 0) {
+                    return done(null, false, {
+                        message: 'Email already taken'
+                    });
+                }
+                let hash = await bcrypt.hashPassword(password)
+                const newUser = {
+                    email: email,
+                    password: hash,
+                };
+                console.log(req.body);
+                let userId = await knex('users').insert(newUser).returning('id');
+                newUser.id = userId;
+                done(null, newUser);
+            } catch (err) {
+                done(err);
+            }
+        }));
 
     passport.use('local-login', new LocalStrategy(
-        (email, password, done) => {
+        async(email, password, done) => {
+            try {
+                let users = await knex('users').where({
+                    email: email
+                })
+                if (users.length == 0) {
+                    return done(null, false, {
+                        message: 'Incorrect credentials'
+                    });
+                }
+                let user = users[0];
+                let result = await bcrypt.checkPassword(password, user.password);
+                if (result) {
+                    return done(null, user);
+                } else {
+                    return done(null, false, {
+                        message: 'Incorrect credentials'
+                    });
+                }
+            } catch (err) {
+                done(err);
+            }
+        }
+    ));
 
-            let getUsers = knex.select('*').from('users').where('username', email);
-            getUsers
-                .then((user) => {
-                    user = user[0];
-                    if (user == null) {
-                        console.log('incorrect username: ', email);
-                        return done(null, false, {
-                            message: 'Incorrect credentials.'
-                        })
-                    } else {
-                        bcrypt.checkPassword(password, user.password)
-                            .then(result => {
-                                if (result) {
-                                    return done(null, user);
-                                } else {
-                                    return done(null, false, {
-                                        message: 'Incorrect credentials'
-                                    });
-                                }
-                            })
-                            .catch(err => {
-                                return done(err);
-                            });
-                    }
-                })
-        }));
-    passport.use('local-signup', new LocalStrategy(
-        (email, password, done) => {
-            // [REVIEW] Use Transaction
-            let getUsers = knex.select('*').from('users').where('username', email);
-            getUsers
-                .then((user) => {
-                    user = user[0];
-                    if (user) {
-                        return done(null, false, {
-                            message: 'Email already taken',
-                            signupForm: "show"
-                        });
-                    } else {
-                        bcrypt.hashPassword(password)
-                            .then(hash => {
-                                const newUser = {
-                                    username: email,
-                                    password: hash
-                                };
-                                knex.insert(newUser).into('users')
-                                    .then(function(result) {
-                                        console.log(result);
-                                    })
-                                done(null, newUser);
-                            })
-                            .catch(err => console.log(err));
-                    }
-                })
-        }));
+    passport.serializeUser((user, done) => {
+        done(null, user.id);
+    });
+
+    passport.deserializeUser(async(id, done) => {
+        let users = await knex('users').where({
+            id: Number(id)
+        });
+        if (users.length == 0) {
+            return done(new Error(`Wrong user id ${id}`));
+        }
+        let user = users[0];
+        return done(null, user);
+    });
 };
