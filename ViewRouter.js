@@ -40,7 +40,9 @@ class ViewRouter {
         });
 
         router.get('/', (req, res) => {
-            res.render('index');
+            res.render('index', {
+                css: ['index.css']
+            });
         });
 
         router.get('', (req, res) => {
