@@ -1,8 +1,7 @@
-const passport = require('passport');
-const flash = require('connect-flash');
+const passport = require('passport')
 
-module.exports = (app, knex) => {
-    app.use(flash());
+
+module.exports = (app) => {
     app.use(passport.initialize());
     app.use(passport.session());
 
@@ -14,6 +13,7 @@ module.exports = (app, knex) => {
         done(null, user);
     });
 
-    require('./strategies/FacebookStrategy')(passport, knex);
-    require('./strategies/LocalStrategy')(passport, knex);
-};
+    require('./strategies/LocalStrategy')(passport);
+    require('./strategies/FacebookStrategy')(passport);
+
+}

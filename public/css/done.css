@@ -1,26 +1,35 @@
+html{
+    background-color:#000000;
+    color: #ffffff;
+} 
+
 body {
-    background-color: #000000;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+  }
 
-}
-
-main {
+  main {
     flex: 1 0 auto;
-}
+    padding-top:50px;
+    font-family: 'Philosopher', sans-serif;
+  }
 
-/* navbar */
 nav {
     font-family: 'Philosopher', sans-serif;
 }
 
+/* main */
+#tick .svg-inline--fa {
+    font-size: 400px !important;
+}
 
+#tick a{
+    font-family: 'Philosopher', sans-serif;
+}
 
-/* footer */
-
-footer p {
-
+/* footer */ 
+footer {
     font-family: 'Cinzel', serif;
 }
 
@@ -28,12 +37,11 @@ footer a {
     font-family: 'Cinzel', serif;
 }
 
-.checkout {
-    color: white;
+.footer-copyright center-align {
     font-family: 'Cinzel', serif;
-}
-          
-/*social media icons*/
+  }
+
+  /* social media icons*/ 
 
 .fa-facebook {
     font-size: 40px;

@@ -1,32 +1,45 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var app = express();
-const hb = require('express-handlebars')
+require('dotenv').config();
+const REDIS_HOST = process.env.REDIS_HOST || 'localhost';
+const REDIS_PORT = process.env.REDIS_PORT || 6379
+const NODE_ENV = process.env.NODE_ENV || 'development'
 
-app.use(express.static('../src'));
-app.use(bodyParser.urlencoded({
-    extended: false
-}));
-app.use(bodyParser.json());
+const knexFile = require('./knexfile')[NODE_ENV]
+const knex = require('knex')(knexFile)
+
+const redis = require('redis');
+const redisClient = redis.createClient({
+    host: REDIS_HOST,
+    port: REDIS_PORT
+})
+
+const fs = require('fs');
+const https = require('https')
+
+const isLoggedIn = require('./utils/guard').isLoggedIn;
+
+// Dependency Injection for Routers and Services
+const ViewRouter = require('./ViewRouter');
+// Need to add the routers for the service
+const {
+    CustomerRouter,
+    SocketIORouter
+} = require('./routers')
 
 
-app.engine('handlebars', hb({
-    defaultLayout: 'main'
-}));
-app.set('view engine', 'handlebars');
-app.get('/tx', function(req, res) {
-    console.log(req)
-    res.render('/views/index.handlebars');
-});
+const {
+    app,
+    server,
+    io
+} = require('./utils/init-app')(redisClient);
 
-app.post('/tx', function(req, res) {
-    console.log(req.body);
-    res.send("Message received");
-});
+new SocketIORouter(io, userService).router();
+app.use('/', new ViewRouter().router());
 
-app.post('/login', function(req, res) {
-    console.log(req.path);
-    res.send('post received');
-});
+const httpsOptions = {
+    key: fs.readFileSync('./localhost.key'),
+    cert: fs.readFileSync('./localhost.crt')
+}
 
-app.listen(8000);
+https.createServer(httpsOptions, app).listen(8080, () => {
+    console.log('Application started at port ' + 8080)
+})

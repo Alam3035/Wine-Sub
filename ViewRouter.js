@@ -39,14 +39,58 @@ class ViewRouter {
             next();
         });
 
-        router.get('/', (req, res) => {
+        router.get('/', function(req, res) {
             res.render('index', {
-                css: ['index.css']
-            });
-        });
+                css: ['home.css']
+            })
+        })
 
-        router.get('', (req, res) => {
-            res.render('');
+        router.get('/login', function(req, res) {
+            res.render('login', {
+                css: ['res-log.css']
+            })
+        })
+
+        router.get('/subscription', function(req, res) {
+            res.render('subscription', {
+                css: ['sub.css']
+            })
+        })
+
+        router.get('/quiz-result', function(req, res) {
+            res.render('qr', {
+                css: ['qr.css']
+            })
+        })
+
+        router.get('/change-pw', function(req, res) {
+            res.render('change-pw', {
+                css: ['pw.css']
+            })
+        })
+
+        router.get('/checkout', function(req, res) {
+            res.render('checkout', {
+                css: ['checkout.css']
+            })
+        })
+
+        router.get('/done', function(req, res) {
+            res.render('done', {
+                css: ['done.css']
+            })
+        })
+
+        router.get('/customer-backend', function(req, res) {
+            res.render('back', {
+                css: ['back.css']
+            })
+        })
+
+        router.get('/questionnaire', function(req, res) {
+            res.render('questionnaire', {
+                css: ['ques.css']
+            })
         })
     }
 }
