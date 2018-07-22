@@ -5,46 +5,22 @@ body {
     flex-direction: column;
 
 }
-nav {
-    font-family: 'Philosopher', sans-serif;
-}
-
 
 main {
     flex: 1 0 auto;
 }
 
-.card{
-    background-color: #000000;
-    border-style: groove;
-    border-color:white;
+/* navbar */
+nav {
+    font-family: 'Philosopher', sans-serif;
 }
-
-
-
-
-
-/* gallery */
-
-.slider{
-    background: transparent;
-}
-
-.des {
-
-    font-family:'Cinzel', serif;
-}
-
-.card {
-    border-color: red !important;
-}
-
 
 
 
 /* footer */
 
 footer p {
+
     font-family: 'Cinzel', serif;
 }
 
@@ -73,5 +49,3 @@ footer a {
     font-size: 40px;
     color: #FFFFFF;
 }
-
-
