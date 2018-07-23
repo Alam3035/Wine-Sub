@@ -1,37 +1,49 @@
+const passport = require('passport');
 const FacebookStrategy = require('passport-facebook').Strategy;
-require('dotenv').config();
 
-module.exports = (passport, knex) => {
+module.exports = (app, knex) => {
+    app.use(passport.initialize());
+    app.use(passport.session());
+
     passport.use('facebook', new FacebookStrategy({
         clientID: process.env.FACEBOOK_ID,
         clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
-        callbackURL: `/auth/facebook/callback`
-    }, (accessToken, refreshToken, users, done) => {
-        console.log(users);
-        let getUsers = knex.select('*').from('users').where('facebook_id', users.id);
-
-        getUsers
-            .then((user) => {
-
-                if (user[0] != undefined) {
-                    return done(null, user[0]);
-                } else if (user[0] == undefined) {
-                    users.id = users.id.toString();
-                    knex.insert({
-                        facebook_id: users.id,
-                        display_name: users.displayName,
-                    }).into('users').then(() => {
-                        knex.select('*').from('users').where('facebook_id', users.id)
-                            .then(loginUser => {
-                                console.log('new user: ', loginUser[0]);
-                                return done(null, loginUser[0]);
-                            })
-                    });
-                } else {
-                    return done(null, false, {
-                        message: 'An error has occurred. Please try to log in again'
-                    });
-                }
-            })
+        callbackURL: `/auth/facebook/callback`,
+        profileFields: ['id', 'name', 'emails', 'displayName']
+    }, async(accessToken, refreshToken, profile, done) => {
+        try {
+            let usersResult = await knex('users').where({
+                facebookId: profile.id
+            });
+            if (usersResult.length == 0) {
+                let user = await knex('users').insert({
+                    name: profile.displayName,
+                    facebookId: profile.id,
+                    accessToken: accessToken,
+                    profile_picture: profile.photos[0].value
+                })
+                return done(null, user)
+            } else {
+                // console.log(profile);
+                return done(null, usersResult[0]);
+            }
+        } catch (err) {
+            return done(err);
+        }
     }));
-}
+
+    passport.serializeUser((user, done) => {
+        done(null, user.id);
+    });
+
+    passport.deserializeUser(async(id, done) => {
+        let users = await knex('users').where({
+            id: id
+        });
+        if (users.length == 0) {
+            return done(new Error(`Wrong user id ${id}`));
+        }
+        let user = users[0];
+        return done(null, user);
+    });
+};

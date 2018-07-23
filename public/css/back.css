@@ -1,36 +1,55 @@
-html{
-    background-color:#000000;
+html {
+    background-color: #000000;
     color: #ffffff;
-} 
+}
 
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+}
 
 main {
     flex: 1 0 auto;
-  }
+}
 
 nav {
     font-family: 'Philosopher', sans-serif;
 }
 
-/* footer */ 
-footer p {
+.card {
+    font-family: 'Cinzel', serif;
+    border: groove;
+    border-color: #ffffff;
+}
+
+.card span {
+    font-size: 6vh !important;
+}
+
+.pbs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sob {
     font-family: 'Cinzel', serif;
 }
 
-footer a {
+
+/* footer */
+
+h6 {
+    font-family: 'Cinzel', serif;
+    font-size: 3vh;
+}
+
+footer {
     font-family: 'Cinzel', serif;
 }
 
-.footer-copyright center-align {
-    font-family: 'Cinzel', serif;
-  }
 
-  /* social media icons*/ 
+/* social media icons*/
 
 .fa-facebook {
     font-size: 40px;
