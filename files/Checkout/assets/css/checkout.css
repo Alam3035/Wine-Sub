@@ -100,9 +100,9 @@ footer a {
 /* mobile */
 @media only screen and (max-width: 793px) {
 
-  span {
+.card-content .card-title span {
     display: flex !important;
     justify-content: center !important;
   }
-  
+
 }

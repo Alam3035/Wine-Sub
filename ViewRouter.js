@@ -1,46 +1,104 @@
 const express = require('express')
 const passport = require('passport')
 const session = require('express-session')
-const expressValidator = require('express-validator')
+const bodyParser = require('body-parser');
+const urlencodedParser = bodyParser.urlencoded({
+    extended: false
+})
+const isLoggedIn = require('./utils/guard').isLoggedIn;
 
-const isLoggedIn = (req, res, next) => {
-    if (req.isAuthenticated()) {
-        return next();
-    }
-    res.redirect('/login');
-};
+module.exports = class ViewRouter {
 
-class ViewRouter {
     constructor(knex, io) {
         this.knex = knex;
         this.io = io;
     }
+
     router() {
         const router = express.Router();
 
-        // Flash message middleware
-        router.use(session({
-            secret: 'Secret',
-            resave: false,
-            saveUninitialized: true,
-            cookie: {
-                secure: false,
-            }, // change this to true when using https
+        router.get('/', function(req, res) {
+            res.render('index', {
+                css: ['home.css']
+            })
+        })
+
+        router.get('/login', (req, res) => {
+            res.render('login', {
+                css: ['res-log.css']
+            })
+        })
+
+        router.post('/login', passport.authenticate('local-login', {
+            successRedirect: '/customer-backend',
+            failureRedirect: '/error'
         }));
 
-        router.use(expressValidator());
+        router.get('/error', (req, res) => {
+            res.send('You are not Logged in!!!')
+        })
 
-        // Validator
-        router.use((req, res, next) => {
-            res.locals.success_message = req.flash('success_message');
-            res.locals.error_message = req.flash('error_message');
-            res.locals.error = req.flash('error');
-            res.locals.user = req.user || null;
-            next();
+        router.get("/auth/facebook", passport.authenticate('facebook', {
+            scope: ['user_friends', 'manage_pages']
+        }));
+
+        router.get("/auth/facebook/callback", passport.authenticate('facebook', {
+            successRedirect: "/customer-backend",
+            failureRedirect: "/"
+        }), (req, res) => res.redirect('/customer-backend'));
+
+        router.post('/signup', passport.authenticate('local-signup', {
+            successRedirect: '/questionnaire',
+            failureRedirect: '/error'
+        }));
+
+        router.get('/subscription', function(req, res) {
+            res.render('subscription', {
+                css: ['sub.css']
+            })
+        })
+
+        router.get('/quiz-result', function(req, res) {
+            res.render('qr', {
+                css: ['qr.css']
+            })
+        })
+
+        router.get('/change-pw', (req, res) => {
+            res.render('change-pw', {
+                css: ['pw.css']
+            })
+        })
+
+        router.get('/checkout', (req, res) => {
+            res.render('checkout', {
+                css: ['checkout.css']
+            })
+        })
+
+        router.post('/tx', function(req, res) {
+            console.log(req.body);
+            res.send("Message received");
         });
 
-        router.get('/', (req, res) => {
-            res.render('index');
-        });
+        router.get('/done', (req, res) => {
+            res.render('done', {
+                css: ['done.css']
+            })
+        })
+
+        router.get('/customer-backend', (req, res) => {
+            res.render('back', {
+                css: ['back.css']
+            })
+        })
+
+        router.get('/questionnaire', function(req, res) {
+            res.render('questionnaire', {
+                css: ['ques.css']
+            })
+        })
+
+        return router;
     }
 }
