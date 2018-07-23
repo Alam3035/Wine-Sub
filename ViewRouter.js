@@ -72,7 +72,8 @@ module.exports = class ViewRouter {
 
         router.get('/checkout', (req, res) => {
             res.render('checkout', {
-                css: ['checkout.css']
+                css: ['checkout.css'],
+                js: ['checkout.js']
             })
         })
 

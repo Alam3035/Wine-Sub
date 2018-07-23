@@ -106,7 +106,7 @@ web3 = new Web3(App.web3Provider);
       wine = instance;
       return wine.transfer(receiver, 100000000000000000000, {from: account});
     }).then(function(result) {
-      return axios.post('http://localhost:8000/tx', {txid: result.tx});
+      return axios.post('http://localhost:8080/tx', {txid: result.tx});
     }).then(function(result) {
       alert("Transaction successful!");
     }).catch(function(err){
@@ -127,8 +127,10 @@ web3 = new Web3(App.web3Provider);
   }
 };
 
-$(function() {
-  $(window).load(function() {
-    App.init();
-  });
-});
+
+App.init();
+// (function($) {
+//   $(window).load(function() {
+//     App.init();
+//   });
+// });
