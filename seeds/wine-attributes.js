@@ -1,6 +1,13 @@
 exports.seed = function(knex, Promise) {
     return knex('wines').insert([{
-        username: 'alam',
-        password: 'alam'
-    }])
+        winename: 'alam',
+        grape: 'alam',
+        place: 'america',
+    }, {
+        winename: '',
+        grape: '',
+        country: ''
+    }, {
+
+    }], )
 }

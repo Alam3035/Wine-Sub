@@ -1,81 +1,59 @@
 body {
-
     background-color: #000000;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-
 }
+
 nav {
-
     font-family: 'Philosopher', sans-serif;
-
 }
-
 
 main {
-
     flex: 1 0 auto;
-
 }
 
-.card{
-
+.card {
     background-color: #000000;
     border-style: groove;
-    border-color:white;
-
+    border-color: white;
 }
 
-h3{
-
+h3 {
     font-family: 'Cinzel', serif;
     font-size: 3vh;
-
 }
-
 
 
 /* gallery */
 
-.slider{
-
+.slider {
     background: transparent;
     height: 1000px !important;
-
 }
 
-.slides{
-
+.slides {
     height: 1000px !important;
     background-color: #1a1a1a !important;
-
 }
 
 .words {
-
-    font-family:'Cinzel', serif;
+    font-family: 'Cinzel', serif;
     font-size: 19px;
 }
 
-.words p{
-
+.words p {
     font-size: 17px;
-
 }
 
-.words span{
-
+.words span {
     font-size: 17px;
-
 }
-
 
 
 /* footer */
 
 footer p {
-
     font-family: 'Cinzel', serif;
 }
 
@@ -87,7 +65,8 @@ footer a {
     color: white;
     font-family: 'Cinzel', serif;
 }
-          
+
+
 /*social media icons*/
 
 .fa-facebook {
@@ -104,5 +83,3 @@ footer a {
     font-size: 40px;
     color: #FFFFFF;
 }
-
-

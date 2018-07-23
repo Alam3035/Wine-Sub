@@ -1,7 +1,7 @@
-html{
-    background-color:#000000;
+html {
+    background-color: #000000;
     color: #ffffff;
-} 
+}
 
 body {
     background-image: url(/files/register-login/assets/images/agriculture-clouds-grapes-21393.jpg);
@@ -17,12 +17,11 @@ nav {
 
 main {
     flex: 1 0 auto;
-  }
-
-main button{
-    font-family: 'Cinzel', serif;
 }
 
+main button {
+    font-family: 'Cinzel', serif;
+}
 
 .card {
     background: rgba(0, 0, 0, .6);
@@ -35,19 +34,24 @@ main button{
     margin-top: 100px;
 }
 
-
 .label {
     font-size: 16px;
     color: #ffffff;
 }
 
-/* footer */ 
-footer  {
+input {
+    color: #FFFFFF;
+}
+
+
+/* footer */
+
+footer {
     font-family: 'Cinzel', serif;
 }
 
 
-/* social media icons*/ 
+/* social media icons*/
 
 .fa-facebook {
     font-size: 40px;
