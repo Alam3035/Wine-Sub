@@ -20,20 +20,25 @@ const isLoggedIn = require('./utils/guard').isLoggedIn;
 // Dependency Injection for Routers and Services
 const ViewRouter = require('./ViewRouter');
 // Need to add the routers for the service
+
 const {
     CustomerRouter,
     SocketIORouter
 } = require('./routers')
 
+const {
+    UserService
+} = require('./services');
 
 const {
     app,
-    server,
     io
-} = require('./utils/init-app')(redisClient);
+} = require('./utils/init-app')(knex);
+
+let userService = new UserService(knex, redisClient);
 
 new SocketIORouter(io, userService).router();
-app.use('/', new ViewRouter().router());
+app.use('/', new ViewRouter(knex, io).router());
 
 const httpsOptions = {
     key: fs.readFileSync('./localhost.key'),
