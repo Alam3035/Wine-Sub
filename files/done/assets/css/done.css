@@ -19,7 +19,25 @@ nav {
     font-family: 'Philosopher', sans-serif;
 }
 
+
 /* main */
+
+img{
+    max-height:300px;
+}
+
+.select-wrapper+label {
+    font-size: 5vh;
+}
+
+ul{
+    font-size: 3vh;
+}
+
+li{
+
+}
+
 #tick .svg-inline--fa {
     font-size: 400px !important;
 }
