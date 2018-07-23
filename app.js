@@ -64,6 +64,11 @@ app.use('/', new ViewRouter().router());
 // app.use('/event', isLoggedIn, (new EventRouter(eventService)).router());
 
 
-app.listen(port, function() {
-    console.log("listening on " + port);
-});
+const httpsOptions = {
+    key: fs.readFileSync('./localhost.key'),
+    cert: fs.readFileSync('./localhost.crt')
+}
+
+https.createServer(httpsOptions, app).listen(3000, () => {
+    console.log('Application started at port ' + 3000)
+})
