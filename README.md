@@ -19,3 +19,15 @@ can make data we stored well-structured.
 About Frontend, MATERIALIZE is the css framework we use.
 
 WINE, is the cryto currency we build for customer to procceed the payment process.
+
+In The furture, we want to build the following functions below which can increase the productivty of the app:
+
+Frontend side-
+1) Add an extentsion function in the subscription plan to allow customers able to extend the plan.
+2) Add a top-up function to let them to upgrade their plans.
+3) Add a chatbox to enhance user-experience.
+4) Integrate An API function to let them track the shipment status.
+
+Backend side-
+1) Integrate more API to help improve our management process (e.g. Analytics tools, chatbox, Inventory, content editor)
+2) Build a CMS interface to help us monitor all the orders.
