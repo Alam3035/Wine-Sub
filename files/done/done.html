@@ -75,29 +75,23 @@
         </div>
         
     <main>
-        <section id="tick">
-            <div class="container">
-                <div class="row center-align">
-                        <i class="far fa-check-circle"></i>
-                </div>
-                
-                     <div class="row center-align white-text">
-                        <h1>Order Completed</h1>
-                        <a href="">This is your transaction hash </a>
+            <form class="col s12 white-text">
+                    <div class="row container Vertical Align">
+                        <div class="input-field col l8 offset-l3 s6">
+                            <select>
+                                <option value="" disabled selected>Choose</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                                <option value="3">Prefer not to say</option>
+                            </select>
+                            <label>1. Select Gender</label>
+                        </div>
+                        <div class="input-field col l1 s6">
+                            <img src="assets/images/q1.jpeg">
+                        </div>
                     </div>
-
-                    <div class="row center-align">
-                        <a class="btn red darken-3" href="/home/index.html">Go Back To Home</a>
-                    </div>
-                           
-                    
-            </div>
-        </section>
-
-
-
-
-
+        </form>
+        
     </main>
      <!-- Footer -->
      <footer class="page-footer black " id="contact">
@@ -145,15 +139,6 @@
                 const sideNav = document.querySelector(".sidenav ");
                 M.Sidenav.init(sideNav, {});
         
-                // Slider
-                const slider = document.querySelector(".slider ");
-                M.Slider.init(slider, {
-                    indicators: false,
-                    height: 700,
-                    transition: 500,
-                    interval: 6000
-                });
-        
                 // Dropdown
                 $(".dropdown-trigger ").dropdown({
                     hover: true,
@@ -167,6 +152,12 @@
                 // ScrollSpy
                 const ss = document.querySelectorAll(".scrollspy ");
                 M.ScrollSpy.init(ss, {});
+                
+                // From Selection
+                $(document).ready(function() {
+                    $('select').formSelect();
+                });
+
             </script>    
     
 </body>

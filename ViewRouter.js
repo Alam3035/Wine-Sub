@@ -43,8 +43,14 @@ module.exports = class ViewRouter {
         }));
 
         router.get("/auth/facebook/callback", passport.authenticate('facebook', {
+            successRedirect: "/customer-backend",
             failureRedirect: "/"
         }), (req, res) => res.redirect('/customer-backend'));
+
+        router.post('/signup', passport.authenticate('local-signup', {
+            successRedirect: '/questionnaire',
+            failureRedirect: '/error'
+        }));
 
         router.get('/subscription', function(req, res) {
             res.render('subscription', {
@@ -58,25 +64,25 @@ module.exports = class ViewRouter {
             })
         })
 
-        router.get('/change-pw', isLoggedIn, (req, res) => {
+        router.get('/change-pw', (req, res) => {
             res.render('change-pw', {
                 css: ['pw.css']
             })
         })
 
-        router.get('/checkout', isLoggedIn, (req, res) => {
+        router.get('/checkout', (req, res) => {
             res.render('checkout', {
                 css: ['checkout.css']
             })
         })
 
-        router.get('/done', isLoggedIn, (req, res) => {
+        router.get('/done', (req, res) => {
             res.render('done', {
                 css: ['done.css']
             })
         })
 
-        router.get('/customer-backend', isLoggedIn, (req, res) => {
+        router.get('/customer-backend', (req, res) => {
             res.render('back', {
                 css: ['back.css']
             })
