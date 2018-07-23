@@ -1,50 +1,69 @@
-require('dotenv').config();
-const REDIS_HOST = process.env.REDIS_HOST || 'localhost';
-const REDIS_PORT = process.env.REDIS_PORT || 6379
-const NODE_ENV = process.env.NODE_ENV || 'development'
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const hb = require('express-handlebars');
 
-const knexFile = require('./knexfile')[NODE_ENV]
-const knex = require('knex')(knexFile)
+const passportSetup = require('./utils/strategies/LocalStrategy.js');
+const passportFacebookSetup = require('./utils/strategies/FacebookStrategy.js')
+const expressSession = require('express-session');
 
-const redis = require('redis');
-const redisClient = redis.createClient({
-    host: REDIS_HOST,
-    port: REDIS_PORT
-})
 
-const fs = require('fs');
-const https = require('https')
+// Database
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const knexFile = require('./knexfile')[NODE_ENV];
+const knex = require('knex')(knexFile);
 
+const port = process.env.PORT || 3000;
+
+// Check for Logged in User
 const isLoggedIn = require('./utils/guard').isLoggedIn;
 
-// Dependency Injection for Routers and Services
-const ViewRouter = require('./ViewRouter');
-// Need to add the routers for the service
+// Body-parser
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 
-const {
-    CustomerRouter,
-    SocketIORouter
-} = require('./routers')
+// static file
+app.use(express.static("public"));
 
-const {
-    UserService
-} = require('./services');
+// View engine
+app.set('view engine', 'handlebars');
+app.engine('handlebars', hb({
+    defaultLayout: 'main'
+}));
 
-const {
-    app,
-    io
-} = require('./utils/init-app')(knex);
+// Express session
+app.use(expressSession({
+    secret: 'its-a-very-big-secret'
+}));
 
-let userService = new UserService(knex, redisClient);
+// Passport
+passportSetup(app, knex);
+passportFacebookSetup(app, knex);
 
-new SocketIORouter(io, userService).router();
-app.use('/', new ViewRouter(knex, io).router());
+// Routes
+const ViewRouter = require('./ViewRouter.js');
+// const SettingsRouter = require('./routes/settingsRouter');
+// const EventRouter = require('./routes/eventRouter');
+// const PlaceRouter = require('./routes/placeServiceRouter');
 
-const httpsOptions = {
-    key: fs.readFileSync('./localhost.key'),
-    cert: fs.readFileSync('./localhost.crt')
-}
+// Services
+// const UserService = require('./services/userService');
+// const PlaceService = require('./services/placeService');
+// const EventService = require('./services/eventService');
 
-https.createServer(httpsOptions, app).listen(8080, () => {
-    console.log('Application started at port ' + 8080)
-})
+// let userService = new UserService(knex);
+// let placeService = new PlaceService(knex);
+// let eventService = new EventService(knex);
+
+
+app.use('/', new ViewRouter().router());
+// app.use('/settings', (new SettingsRouter(userService)).router());
+// app.use('/api/places',new PlaceRouter(placeService).router());
+// app.use('/api', isLoggedIn, (new EventRouter(eventService)).router());
+// app.use('/event', isLoggedIn, (new EventRouter(eventService)).router());
+
+
+app.listen(port, function() {
+    console.log("listening on " + port);
+});

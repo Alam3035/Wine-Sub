@@ -1,56 +1,44 @@
 body {
-
     background-color: #000000;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-
 }
+
 nav {
-
     font-family: 'Philosopher', sans-serif;
-
 }
-
 
 main {
-
     flex: 1 0 auto;
-
 }
+
 
 /* Choices */
 
-.card{
-    border: groove;
+.card {
+    border: groove !important;
     border-color: red !important;
     font-family: 'Cinzel', serif;
 }
 
-.card-title{
+.card-title {
     font-size: 5vh !important;
 }
 
-.card-content li{
+.card-content li {
     font-size: 19px;
 }
 
 
-
-
-
-
 /* footer */
 
-h3{
-
+h3 {
     font-family: 'Cinzel', serif;
     font-size: 3vh;
-
 }
 
 footer p {
-
     font-family: 'Cinzel', serif;
 }
 
@@ -62,7 +50,7 @@ footer a {
     color: white;
     font-family: 'Cinzel', serif;
 }
-          
+
 
 /*social media icons*/
 
@@ -80,5 +68,3 @@ footer a {
     font-size: 40px;
     color: #FFFFFF;
 }
-
-
