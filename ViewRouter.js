@@ -76,6 +76,11 @@ module.exports = class ViewRouter {
             })
         })
 
+        router.post('/tx', function(req, res) {
+            console.log(req.body);
+            res.send("Message received");
+        });
+
         router.get('/done', (req, res) => {
             res.render('done', {
                 css: ['done.css']
