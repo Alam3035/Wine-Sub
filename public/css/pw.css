@@ -1,5 +1,5 @@
 body {
-    background-image: url(/change-pw/asssets/img/alcohol-close-up-colors-935240.jpg);
+    background-image: url(/img//change-pw-images/alcohol-close-up-colors-935240.jpg);
     background-size: cover;
 }
 
@@ -7,38 +7,41 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+}
 
-  main {
+main {
     flex: 1 0 auto;
-  }
+}
 
-  nav {
+nav {
     font-family: 'Philosopher', sans-serif;
 }
 
 
 /* icon */
+
 .fa-facebook {
-  font-size: 40px;
-  color: #FFFFFF;
+    font-size: 40px;
+    color: #FFFFFF;
 }
 
 .fa-twitter {
-  font-size: 40px;
-  color: #FFFFFF;
+    font-size: 40px;
+    color: #FFFFFF;
 }
 
 .fa-instagram {
-  font-size: 40px;
-  color: #FFFFFF;
+    font-size: 40px;
+    color: #FFFFFF;
 }
 
+
 /* footer */
+
 footer {
-  font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', serif;
 }
 
 .card {
-  font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', serif;
 }
