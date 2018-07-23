@@ -1,102 +1,102 @@
-const express = require('express')
-const passport = require('passport')
-const session = require('express-session')
-const bodyParser = require('body-parser');
-const urlencodedParser = bodyParser.urlencoded({
-    extended: false
-})
+const express = require("express");
+const passport = require('passport');
 const isLoggedIn = require('./utils/guard').isLoggedIn;
 
 module.exports = class ViewRouter {
 
-    constructor(knex, io) {
-        this.knex = knex;
-        this.io = io;
-    }
-
     router() {
-        const router = express.Router();
+        let router = express.Router();
 
+        //error handle
+        router.use(function(err, req, res, next) {
+            res.status(500).send("Something failded." + err);
+        });
+
+        // Hompage
         router.get('/', function(req, res) {
-            res.render('index', {
-                css: ['home.css']
-            })
-        })
+            res.render('index');
+            console.log(req.user)
+        });
 
-        router.get('/login', (req, res) => {
-            res.render('login', {
-                css: ['res-log.css']
-            })
-        })
+        // Login
+        router.get('/login', function(req, res) {
+            res.render('login');
+        });
 
         router.post('/login', passport.authenticate('local-login', {
-            successRedirect: '/customer-backend',
-            failureRedirect: '/error'
+            successRedirect: '/',
+            failureRedirect: '/login'
         }));
 
-        router.get('/error', (req, res) => {
-            res.send('You are not Logged in!!!')
-        })
+        //Login with facebook
+        router.get('/auth/facebook',
+            passport.authenticate('facebook', {
+                scope: ['user_location', 'email']
+            })
+        );
 
-        router.get("/auth/facebook", passport.authenticate('facebook', {
-            scope: ['user_friends', 'manage_pages']
+        // handle control to passport to use code to grab profile info
+        router.get('/auth/facebook/callback', passport.authenticate('facebook', {
+            successRedirect: '/',
+            failureRedirect: '/error',
+            session: true
         }));
 
-        router.get("/auth/facebook/callback", passport.authenticate('facebook', {
-            successRedirect: "/customer-backend",
-            failureRedirect: "/"
-        }), (req, res) => res.redirect('/customer-backend'));
+        // Signup
+        router.get('/signup', (req, res) => {
+            res.render('signup');
+        });
 
         router.post('/signup', passport.authenticate('local-signup', {
             successRedirect: '/questionnaire',
             failureRedirect: '/error'
         }));
 
-        router.get('/subscription', function(req, res) {
-            res.render('subscription', {
-                css: ['sub.css']
-            })
-        })
-
-        router.get('/quiz-result', function(req, res) {
-            res.render('qr', {
-                css: ['qr.css']
-            })
-        })
-
-        router.get('/change-pw', (req, res) => {
-            res.render('change-pw', {
-                css: ['pw.css']
-            })
-        })
-
-        router.get('/checkout', (req, res) => {
-            res.render('checkout', {
-                css: ['checkout.css']
-            })
-        })
-
-        router.post('/tx', function(req, res) {
-            console.log(req.body);
-            res.send("Message received");
+        // Logout
+        router.get('/logout', isLoggedIn, function(req, res) {
+            req.logout();
+            res.redirect('/login');
         });
 
-        router.get('/done', (req, res) => {
-            res.render('done', {
-                css: ['done.css']
-            })
+        // Signup error
+        router.get('/error', (req, res) => {
+            res.send('You are not logged in!');
+        });
+
+        // Questionnaire
+        router.get('/questionnaire', isLoggedIn, function(req, res) {
+            res.render('questionnaire');
+        });
+
+        // Questionnaire-Result
+        router.get('/qr', isLoggedIn, function(req, res) {
+            res.render('qr');
+        });
+
+        // Subscription
+        router.get('/subscription', isLoggedIn, function(req, res) {
+            res.render('subscription');
+        });
+
+        // Checkout
+        router.get('/checkout', isLoggedIn, function(req, res) {
+            res.render('checkout');
         })
 
-        router.get('/customer-backend', (req, res) => {
-            res.render('back', {
-                css: ['back.css']
-            })
+        // Transaction
+        router.post('tx', isLoggedIn, function(req, res) {
+            console.log(req.body);
+            let input = req.body
         })
 
-        router.get('/questionnaire', function(req, res) {
-            res.render('questionnaire', {
-                css: ['ques.css']
-            })
+        // Change Password
+        router.get('/change-pw', isLoggedIn, function(req, res) {
+            res.render('change-pw');
+        })
+
+        // Customer-Backend
+        router.get('/customer-backend', isLoggedIn, function(req, res) {
+            res.render('customer-backend');
         })
 
         return router;
