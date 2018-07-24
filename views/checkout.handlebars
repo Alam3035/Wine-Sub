@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/css/checkout.css">
 
+
 <main>
     <div class="row">
         <div id="info" class="col l6 s12 left-align ">
@@ -55,7 +56,17 @@
                                 <div class="col l12 s12">
                                     <form id="input-data">
                                         <input placeholder="Please type it here" type="text" id="address">
-                                        <!-- <label for="address"></label> -->
+                                        <div>
+                                            <script>    
+                                                $.get('/api/subscription').then(data => {
+                                                data.forEach(e => {
+                                                    $("#my-detail").append(UserDetail(
+                                                        e.email,
+                                                    ))
+                                                });
+                                                });                                      
+                                                </script>
+                                        </div>
                                     </form>
                                 </div>
                             </div>

@@ -103,12 +103,17 @@ module.exports = class ViewRouter {
         });
 
         router.put('/api/subscription', function(req, res) {
-            console.log(req.body);
-
             res.send('Message received');
-            knex('order').insert({subscription: req.body.subscription}).then(function () {
+            knex('order').insert({subscription: req.body.subscription, facebookid: middleware}).then(function () {
             });        
         })
+
+        router.get('/api/subscription', function(req, res) {
+            res.send('Respond');
+            knex.select("subscription").from("order").where("facebookid", middleware).then(function(data) {
+                return data;
+            })
+            });        
 
         // Checkout
         router.get('/checkout', function(req, res) {
