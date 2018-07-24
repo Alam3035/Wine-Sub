@@ -1,7 +1,11 @@
 $(() => {
     // Getting user profile information
     $.get(`/api/user/details`).then(data => {
+<<<<<<< HEAD
         data.forEach(e => {
+=======
+        data(e => {
+>>>>>>> a1edb1603cb3989f128275f86a5fa52138c4cf15
             $("#my-detail").append(UserDetail(
                 e.email,
                 e.username,
@@ -21,17 +25,29 @@ $(() => {
 
                 <div class="row">
                 <label>Email:  </label>
+<<<<<<< HEAD
                 <input type="text" name="username" value="${email}" readonly/>
+=======
+                <input type="text" name="email" value="${email}" readonly/>
+>>>>>>> a1edb1603cb3989f128275f86a5fa52138c4cf15
                 </div>
 
                 <div class="row">
                     <label>Telephone:  </label>
+<<<<<<< HEAD
                     <input type="text" name="username" value="${telephone}" readonly/>
+=======
+                    <input type="text" name="telephone" value="${telephone}" readonly/>
+>>>>>>> a1edb1603cb3989f128275f86a5fa52138c4cf15
                 </div>
 
                 <div class="row">
                 <label>Address:  </label>
+<<<<<<< HEAD
                 <input type="text" name="username" value="${address}" readonly/>
+=======
+                <input type="text" name="address" value="${address}" readonly/>
+>>>>>>> a1edb1603cb3989f128275f86a5fa52138c4cf15
                 </div>
             </form>`
     }
@@ -50,6 +66,7 @@ $(() => {
             .catch(err => console.log(err));
     })
 
+<<<<<<< HEAD
     $.get(`/api/order/subscription`).then(data => {
         data.forEach(e => {
             $("#my-detail").append(SubscriptionDetail(
@@ -88,4 +105,11 @@ $(() => {
         .catch(err => console.log(err));
     })
 
+=======
+    const SubscriptionDetail = (subscription) => {
+        return `
+        <div><h5 value="${subscription}"></h5></div>
+        `
+    }
+>>>>>>> a1edb1603cb3989f128275f86a5fa52138c4cf15
 });

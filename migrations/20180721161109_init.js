@@ -53,7 +53,7 @@ exports.up = function(knex, Promise) {
     }).then(() => {
         return knex.schema.createTable('order', (order) => {
             order.increments();
-            order.integer('userid');
+            order.integer('facebookid');
             order.integer('subscription');
             order.date('orderdate');
             order.string('txid');
