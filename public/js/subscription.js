@@ -4,7 +4,7 @@ $(() => {
         axios.put('/api/subscription', {
             "subscription": 1
         })
-        .then(() => location.reload())
+        .then(() => document.location=('https://localhost:3000/checkout'))
         .catch(err => console.log(err));
     })
 
@@ -13,7 +13,7 @@ $(() => {
         axios.put('/api/subscription', {
             "subscription": 4
         })
-        .then(() => location.reload())
+        .then(() => document.location=('https://localhost:3000/checkout'))
         .catch(err => console.log(err));
     })
 
@@ -23,7 +23,7 @@ $(() => {
         axios.put('/api/subscription', {
             "subscription": 12
         })
-        .then(() => location.reload())
+        .then(() => document.location=('https://localhost:3000/checkout'))
         .catch(err => console.log(err));
     })
 })
