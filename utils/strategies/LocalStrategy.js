@@ -9,7 +9,7 @@ module.exports = (app, knex) => {
     passport.use('local-login', new LocalStrategy(
         async(email, password, done) => {
             try {
-                let users = await knex('user').where({
+                let users = await knex('users').where({
                     email: email
                 });
                 if (users.length == 0) {
@@ -34,32 +34,36 @@ module.exports = (app, knex) => {
         }
     ));
 
-    passport.use('local-signup', new LocalStrategy({
-            passReqToCallback: true //  allow req to be passed as the first argument to the verify callback.
-        },
+    passport.use('local-signup', new LocalStrategy(
+        // {
+        //     passReqToCallback: true //  allow req to be passed as the first argument to the verify callback.
+        // },
 
-        async(req, email, password, done) => {
+        async(email, password, done) => {
+            console.log('hi')
             try {
-                let users = await knex('user').where({
+                let users = await knex('users').where({
                     email: email
                 });
                 // already registered
                 if (users.length > 0) {
+                    console.log('it exist')
                     return done(null, false, {
                         message: 'Email already taken'
                     });
                 }
                 // otherwise create user
                 else {
+                    console.log('creating user')
                     let hash = await bcrypt.hashPassword(password).catch(err => {
                         console.log(err)
                     })
                     const newUser = {
                         name: req.body.name,
                         email: email,
-                        pw: hash
+                        password: hash
                     };
-                    let userId = await knex('user').insert(newUser).returning("id").catch(err => {
+                    let userId = await knex('users').insert(newUser).returning("id").catch(err => {
                         console.log(err)
                     });
                     newUser.id = userId;
@@ -80,11 +84,11 @@ module.exports = (app, knex) => {
     });
 
     passport.deserializeUser(async(id, done) => {
-        let users = await knex('user').where({
+        let users = await knex('users').where({
             id: Number(id)
         });
         if (users.length == 0) {
-            return done(new Error(`Wrong user id ${id}`));
+            return done(new Error(`Wrong users id ${id}`));
         }
         let user = users[0];
         return done(null, user);

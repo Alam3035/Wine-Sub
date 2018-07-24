@@ -9,6 +9,7 @@ exports.up = function(knex, Promise) {
             users.increments();
             users.string("username");
             users.integer("userid");
+            users.string("facebookid");
             users.string("email");
             users.integer("telephone");
             users.string("password");
@@ -71,7 +72,7 @@ exports.down = function(knex, Promise) {
         }).then(() => {
             return knex.schema.dropTable('wines')
         }).then(() => {
-            return knex.scheme.dropTable('users')
+            return knex.schema.dropTable('users')
         }).then(() => {
             return knex.schema.dropTable('banner')
         })
