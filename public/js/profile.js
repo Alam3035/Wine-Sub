@@ -50,6 +50,14 @@ $(() => {
             .catch(err => console.log(err));
     })
 
+    $.get(`/api/subscription/details`).then(data => {
+        data(e => {
+            $("#my-sub").append(SubscriptionDetail(
+                e.subscription
+            ))
+        });
+    });
+
     const SubscriptionDetail = (subscription) => {
         return `
         <div><h5 value="${subscription}"></h5></div>

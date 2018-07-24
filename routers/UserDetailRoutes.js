@@ -1,9 +1,9 @@
 const express = require('express');
 
-class CustomerRouter {
+class UserDetailRoutes {
 
     constructor(customerService) {
-        this.customerService = customerService;
+        this.userDetail = customerService;
     }
 
     router() {
