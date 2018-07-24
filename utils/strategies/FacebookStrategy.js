@@ -18,9 +18,8 @@ module.exports = (app, knex) => {
             if (usersResult.length == 0) {
                 let user = await knex('users').insert({
                     name: profile.displayName,
-                    facebookId: profile.id,
+                    facebookId: users.id,
                     accessToken: accessToken,
-                    profile_picture: profile.photos[0].value
                 })
                 return done(null, user)
             } else {

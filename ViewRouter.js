@@ -37,7 +37,7 @@ module.exports = class ViewRouter {
 
         // handle control to passport to use code to grab profile info
         router.get('/auth/facebook/callback', passport.authenticate('facebook', {
-            successRedirect: '/',
+            successRedirect: '/questionnaire',
             failureRedirect: '/error',
             session: true
         }));
