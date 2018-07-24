@@ -74,9 +74,28 @@ module.exports = class ViewRouter {
         });
 
         // Subscription
+        router.get('/api/user/details', function(req, res) {
+            res.send('details');
+        });
+
+        // Subscription
+        router.get('/api/order/subscription', function(req, res) {
+            res.send('subscription');
+        });
+
+
+        // Subscription
         router.get('/subscription', function(req, res) {
             res.render('subscription');
         });
+
+        router.put('/api/subscription', function(req, res) {
+            console.log(req.body);
+
+            res.send('Message received');
+            knex('order').insert({subscription: req.body.subscription}).then(function () {
+            });        
+        })
 
         // Checkout
         router.get('/checkout', function(req, res) {
