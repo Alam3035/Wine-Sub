@@ -39,11 +39,13 @@ app.engine('handlebars', hb({
 
 // Express session
 app.use(expressSession({
-    secret: 'its-a-very-big-secret'
+    secret: 'its-a-very-big-secret',
+    resave: false,
+    saveUninitialized: false
 }));
 
 // Passport
-passportSetup(app, knex);
+// passportSetup(app, knex);
 passportFacebookSetup(app, knex);
 
 // Routes
@@ -53,11 +55,11 @@ const ViewRouter = require('./ViewRouter.js');
 // const PlaceRouter = require('./routes/placeServiceRouter');
 
 // Services
-// const UserService = require('./services/userService');
+const UserService = require('./services/userService');
 // const PlaceService = require('./services/placeService');
 // const EventService = require('./services/eventService');
 
-// let userService = new UserService(knex);
+let userService = new UserService(knex);
 // let placeService = new PlaceService(knex);
 // let eventService = new EventService(knex);
 
