@@ -1,6 +1,6 @@
 const express = require("express");
 const passport = require('passport');
-const isLoggedIn = require('./utils/guard').isLoggedIn;
+// const isLoggedIn = require('./utils/guard').isLoggedIn;
 
 module.exports = class ViewRouter {
 
@@ -12,7 +12,7 @@ module.exports = class ViewRouter {
             res.status(500).send("Something failded." + err);
         });
 
-        // Hompage
+        // Homepage
         router.get('/', function(req, res) {
             res.render('index');
             console.log(req.user)
@@ -68,17 +68,18 @@ module.exports = class ViewRouter {
             res.render('questionnaire');
         });
 
-        router.post('/questionnaire', function(req,res){
+        router.post('/questionnaire', function(req, res) {
             console.log(req.body);
             knex('quiz').insert({
-                q1:req.body.gender,
-                q2:req.body.age,
-                q3:req.body.frequency,
-                q4:req.body.taste,
-                q5:req.body.price              
-            }).then(function () 
-            {console.log('Message received');
-                res.render('qr')});
+                q1: req.body.gender,
+                q2: req.body.age,
+                q3: req.body.frequency,
+                q4: req.body.taste,
+                q5: req.body.price
+            }).then(function() {
+                console.log('Message received');
+                res.render('qr')
+            });
         })
 
         // Questionnaire-Result
@@ -121,8 +122,9 @@ module.exports = class ViewRouter {
         router.post('/tx', function(req, res) {
             console.log(req.body);
             res.send('Message received');
-            knex('order').insert({txid: req.body}).then(function () {
-            });
+            knex('order').insert({
+                txid: req.body
+            }).then(function() {});
         })
 
         // Done Page

@@ -50,4 +50,9 @@ $(() => {
             .catch(err => console.log(err));
     })
 
+    const SubscriptionDetail = (subscription) => {
+        return `
+        <div><h5 value="${subscription}"></h5></div>
+        `
+    }
 });
