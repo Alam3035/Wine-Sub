@@ -21,17 +21,17 @@ $(() => {
 
                 <div class="row">
                 <label>Email:  </label>
-                <input type="text" name="username" value="${email}" readonly/>
+                <input type="text" name="email" value="${email}" readonly/>
                 </div>
 
                 <div class="row">
                     <label>Telephone:  </label>
-                    <input type="text" name="username" value="${telephone}" readonly/>
+                    <input type="text" name="telephone" value="${telephone}" readonly/>
                 </div>
 
                 <div class="row">
                 <label>Address:  </label>
-                <input type="text" name="username" value="${address}" readonly/>
+                <input type="text" name="address" value="${address}" readonly/>
                 </div>
             </form>`
     }
