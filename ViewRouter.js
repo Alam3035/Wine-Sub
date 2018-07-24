@@ -104,16 +104,11 @@ module.exports = class ViewRouter {
         });
 
         router.put('/api/subscription', function(req, res) {
-            res.send('Message received');
-<<<<<<< HEAD
-            knex('order').insert({subscription: req.body.subscription, facebookid: middleware}).then(function () {
-            });        
-=======
+            res.send('Message received');        
             knex('order').insert({
                 subscription: req.body.subscription,
                 facebookid: middleWare
             }).then(function() {});
->>>>>>> a1edb1603cb3989f128275f86a5fa52138c4cf15
         })
 
         router.get('/api/subscription', function(req, res) {
