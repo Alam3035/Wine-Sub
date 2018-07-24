@@ -1,6 +1,6 @@
 const express = require("express");
 const passport = require('passport');
-// const isLoggedIn = require('./utils/guard').isLoggedIn;
+const isLoggedIn = require('./utils/guard').isLoggedIn;
 
 module.exports = class ViewRouter {
 
@@ -31,7 +31,7 @@ module.exports = class ViewRouter {
         //Login with facebook
         router.get('/auth/facebook',
             passport.authenticate('facebook', {
-                scope: ['user_location', 'email']
+                scope: ['email']
             })
         );
 
@@ -53,7 +53,7 @@ module.exports = class ViewRouter {
         }));
 
         // Logout
-        router.get('/logout', function(req, res) {
+        router.get('/logout',isLoggedIn,function(req, res) {
             req.logout();
             res.redirect('/login');
         });
@@ -64,7 +64,7 @@ module.exports = class ViewRouter {
         });
 
         // Questionnaire
-        router.get('/questionnaire', function(req, res) {
+        router.get('/questionnaire',isLoggedIn, function(req, res) {
             res.render('questionnaire');
         });
 
@@ -83,23 +83,23 @@ module.exports = class ViewRouter {
         })
 
         // Questionnaire-Result
-        router.get('/qr', function(req, res) {
+        router.get('/qr',isLoggedIn, function(req, res) {
             res.render('qr');
         });
 
         // Subscription
-        router.get('/api/user/details', function(req, res) {
+        router.get('/api/user/details',isLoggedIn, function(req, res) {
             res.send('details');
         });
 
         // Subscription
-        router.get('/api/order/subscription', function(req, res) {
+        router.get('/api/order/subscription',isLoggedIn, function(req, res) {
             res.send('subscription');
         });
 
 
         // Subscription
-        router.get('/subscription', function(req, res) {
+        router.get('/subscription',isLoggedIn, function(req, res) {
             res.render('subscription');
         });
 
@@ -119,12 +119,12 @@ module.exports = class ViewRouter {
             });        
 
         // Checkout
-        router.get('/checkout', function(req, res) {
+        router.get('/checkout',isLoggedIn,function(req, res) {
             res.render('checkout');
         })
 
         // Transaction
-        router.post('/tx', function(req, res) {
+        router.post('/tx',isLoggedIn, function(req, res) {
             console.log(req.body);
             res.send('Message received');
             knex('order').insert({
@@ -133,17 +133,12 @@ module.exports = class ViewRouter {
         })
 
         // Done Page
-        router.get('/done', function(req, res) {
+        router.get('/done',isLoggedIn, function(req, res) {
             res.render('done');
         })
 
-        // Change Password
-        router.get('/change-pw', function(req, res) {
-            res.render('change-pw');
-        })
-
         // Customer-Backend
-        router.get('/customer-backend', function(req, res) {
+        router.get('/customer-backend',isLoggedIn, function(req, res) {
             res.render('customer-backend');
         })
 

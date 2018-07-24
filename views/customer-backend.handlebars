@@ -13,7 +13,29 @@
                             <br>
                             <br>
                             <br>
-                            <div id="my-detail" class="container"></div>
+                            <div id="my-detail" class="container">
+                                <form action="action/user/details" method="put" enctype="multipart/form-data">
+                                    <div class="row">
+                                        <label>Username: </label>
+                                        <input type="text" class="white-text" name="username" value="Alam Husnan" readonly/>
+                                    </div>
+
+                                    <div class="row">
+                                        <label>Email: </label>
+                                        <input type="text" class="white-text" name="email" value="kd.dunk81@gmail.com" readonly/>
+                                    </div>
+
+                                    <div class="row">
+                                        <label>Telephone: </label>
+                                        <input type="text" class="white-text" name="telephone" value="91260861" readonly/>
+                                    </div>
+
+                                    <div class="row">
+                                        <label>Address: </label>
+                                        <input type="text" class="white-text" name="address" value="Flat 510, 5/Floor Chak Tin House, Pak Tin Estate, Kowloon" readonly/>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
 
                         <div class="card-action center-align pbs">
@@ -31,8 +53,7 @@
                             <br>
                             <br>
                             <div class="container">
-
-                                <div id="SubscriptionDetail" class="row"></div>
+                                <h5 class="white-text">Monthly Plan</h5>
                             </div>
                         </div>
 
@@ -51,5 +72,19 @@
     </section>
 </main>
 
+<script> 
+    $('#editBtn').on('click', (e) => {
+        e.preventDefault();
+
+        axios.put('/api/user/details', {
+                "username": $('#username').val(),
+                "email": $('#email').val(),
+                "telephone": $('#telephone').val(),
+                "address": $('#address').val(),
+            })
+            .then(() => location.reload())
+            .catch(err => console.log(err));
+    })
+</script>
 <br>
 <br>

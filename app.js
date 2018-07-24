@@ -48,25 +48,11 @@ passportFacebookSetup(app, knex);
 
 // Routes
 const ViewRouter = require('./ViewRouter.js');
-// const SettingsRouter = require('./routes/settingsRouter');
-// const EventRouter = require('./routes/eventRouter');
-// const PlaceRouter = require('./routes/placeServiceRouter');
 
-// Services
-const UserService = require('./services/userService');
-// const PlaceService = require('./services/placeService');
-// const EventService = require('./services/eventService');
-
-let userService = new UserService(knex);
-// let placeService = new PlaceService(knex);
-// let eventService = new EventService(knex);
 
 
 app.use('/', new ViewRouter().router(knex));
-// app.use('/settings', (new SettingsRouter(userService)).router());
-// app.use('/api/places',new PlaceRouter(placeService).router());
-// app.use('/api', isLoggedIn, (new EventRouter(eventService)).router());
-// app.use('/event', isLoggedIn, (new EventRouter(eventService)).router());
+
 
 
 const httpsOptions = {
