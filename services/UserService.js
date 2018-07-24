@@ -15,7 +15,7 @@ class UserService {
         }
 
         if (email) {
-            let select = this.knex('users').column(["email"]).where('email', eamil)
+            let select = this.knex('users').column(["email"]).where('email', email)
                 .then((result) => {
                     if (result == 0) {
                         return this.knex('users').where('id', id).update('email', email)
