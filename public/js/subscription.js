@@ -1,7 +1,6 @@
 $(() => {
     $('#s1').on('click', (e) => {
         e.preventDefault();
-        console.log('hi');
         axios.put('/api/subscription', {
             "subscription": 1
         })
@@ -11,7 +10,6 @@ $(() => {
 
     $('#s2').on('click', (e) => {
         e.preventDefault();
-        console.log('hi');
         axios.put('/api/subscription', {
             "subscription": 4
         })
