@@ -4,7 +4,7 @@ const isLoggedIn = require('./utils/guard').isLoggedIn;
 
 module.exports = class ViewRouter {
 
-    router() {
+    router(knex) {
         let router = express.Router();
 
         //error handle
@@ -79,14 +79,16 @@ module.exports = class ViewRouter {
         });
 
         // Checkout
-        router.get('/checkout', isLoggedIn, function(req, res) {
+        router.get('/checkout', function(req, res) {
             res.render('checkout');
         })
 
         // Transaction
-        router.post('tx', isLoggedIn, function(req, res) {
+        router.post('/tx', function(req, res) {
             console.log(req.body);
-            let input = req.body
+            res.send('Message received');
+            knex('order').insert({txid: req.body}).then(function () {
+            });
         })
 
         // Change Password

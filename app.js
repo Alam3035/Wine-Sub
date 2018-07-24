@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const hb = require('express-handlebars');
+const fs = require('fs');
+const https = require('https');
 
 const passportSetup = require('./utils/strategies/LocalStrategy.js');
 const passportFacebookSetup = require('./utils/strategies/FacebookStrategy.js')
@@ -22,6 +24,10 @@ const isLoggedIn = require('./utils/guard').isLoggedIn;
 app.use(bodyParser.urlencoded({
     extended: false
 }));
+
+// JSON-parser
+app.use(bodyParser.json());
+
 
 // static file
 app.use(express.static("public"));
@@ -57,7 +63,7 @@ const ViewRouter = require('./ViewRouter.js');
 // let eventService = new EventService(knex);
 
 
-app.use('/', new ViewRouter().router());
+app.use('/', new ViewRouter().router(knex));
 // app.use('/settings', (new SettingsRouter(userService)).router());
 // app.use('/api/places',new PlaceRouter(placeService).router());
 // app.use('/api', isLoggedIn, (new EventRouter(eventService)).router());
