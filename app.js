@@ -2,7 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const hb = require('express-handlebars');
-
+const fs = require('fs');
+const https = require('https')
 const passportSetup = require('./utils/strategies/LocalStrategy.js');
 const passportFacebookSetup = require('./utils/strategies/FacebookStrategy.js')
 const expressSession = require('express-session');
