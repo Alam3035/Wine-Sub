@@ -107,14 +107,12 @@ App = {
                 return wine.transfer(receiver, 100000000000000000000, {
                     from: account
                 });
-            }).then(function() {
-                return axios.post('https://localhost:3000/done');
             }).then(function(result) {
                 return axios.post('https://localhost:3000/tx', {
                     txid: result.tx
                 });
-            }).then(function(result) {
-                alert("Transaction successful!");
+              }).then(function() {
+                return document.location=('https://localhost:3000/done');
             }).catch(function(err) {
                 console.log(err);
             })
@@ -134,9 +132,8 @@ App = {
 };
 
 
-App.init();
-// $(function() {
-//   $(window).load(function() {
-//     App.init();
-//   });
-// });
+$(function() {
+  $(window).load(function() {
+    App.init();
+  });
+});
