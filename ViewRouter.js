@@ -37,7 +37,7 @@ module.exports = class ViewRouter {
 
         // handle control to passport to use code to grab profile info
         router.get('/auth/facebook/callback', passport.authenticate('facebook', {
-            successRedirect: '/',
+            successRedirect: '/questionnaire',
             failureRedirect: '/error',
             session: true
         }));
@@ -53,7 +53,7 @@ module.exports = class ViewRouter {
         }));
 
         // Logout
-        router.get('/logout', isLoggedIn, function(req, res) {
+        router.get('/logout', function(req, res) {
             req.logout();
             res.redirect('/login');
         });
@@ -64,17 +64,17 @@ module.exports = class ViewRouter {
         });
 
         // Questionnaire
-        router.get('/questionnaire', isLoggedIn, function(req, res) {
+        router.get('/questionnaire', function(req, res) {
             res.render('questionnaire');
         });
 
         // Questionnaire-Result
-        router.get('/qr', isLoggedIn, function(req, res) {
+        router.get('/qr', function(req, res) {
             res.render('qr');
         });
 
         // Subscription
-        router.get('/subscription', isLoggedIn, function(req, res) {
+        router.get('/subscription', function(req, res) {
             res.render('subscription');
         });
 
@@ -91,13 +91,18 @@ module.exports = class ViewRouter {
             });
         })
 
+        // Done Page
+        router.get('/done', function(req, res) {
+            res.render('done');
+        })
+
         // Change Password
-        router.get('/change-pw', isLoggedIn, function(req, res) {
+        router.get('/change-pw', function(req, res) {
             res.render('change-pw');
         })
 
         // Customer-Backend
-        router.get('/customer-backend', isLoggedIn, function(req, res) {
+        router.get('/customer-backend', function(req, res) {
             res.render('customer-backend');
         })
 

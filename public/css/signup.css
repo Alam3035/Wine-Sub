@@ -32,7 +32,12 @@ main button {
     margin-top: 100px;
 }
 
+<<<<<<< HEAD:files/register-login/assets/css/res-log.css
+
+label {
+=======
 .label {
+>>>>>>> 5eb6cfe6bd1d32e0ad13a7a6da67e3b643c2f522:public/css/signup.css
     font-size: 16px;
     color: #ffffff;
 }

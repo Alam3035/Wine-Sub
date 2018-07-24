@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- css stuffs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link rel="stylesheet" href="/files/quiz/assets/quiz.css">
+
+    <title>Wine2U</title>
+</head>
+<body>
+
+        <body id="home" class="scrollspy">
+                <!-- Navbar -->
+                <div class="navbar-fixed">
+                    <nav class="black">
+                        <div class="container">
+                            <div class="nav-wrapper">
+                                <a href="#home" class="brand-logo"><img src="/home/assets/images/2/logo.jpg"></a>
+                                <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                                    <i class="material-icons">menu</i>
+                                </a>
+                                <ul class="right hide-on-med-and-down">
+                                    <li>
+                                        <a href="/register-login/content-page.html">Sign In</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Subscription/sub.html">Start The Journey</a></li>
+                                    <li>
+                                        <a class="dropdown-trigger btn red darken-3" href="#" data-target="dropdown1">Menu</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                
+        
+                <!-- dropdown-->
+        
+                <ul id="dropdown1" class="dropdown-content">
+                    <li><a class="red-text" href="/Subscription/sub.html"><i class="material-icons">add_circle_outline</i>Subscribe</a></li>
+                    <li><a class="red-text" href="/register-login/content-page.html"><i class="material-icons">fingerprint</i>Login / Registrate Account</a></li>
+                    <li><a class="red-text" href="#about-us"><i class="material-icons">tag_faces</i>About Us</a></li>
+                    <li><a class="red-text" href="#contact"><i class="material-icons">contacts</i>Contact Us</a></li>
+                </ul>
+        
+                <!-- Sidenav-->
+                <ul class="sidenav" id="mobile-nav">
+                    <li>
+                        <a href="/Subscription/sub.html">Subscribe</a>
+                    </li>
+                    <li>
+                        <a href="/register-login/content-page.html">Login/Registration</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#about-us">About Us</a>
+                    </li>
+                </ul>
+        
+                <!--Floating Action Button-->
+                <div class="fixed-action-btn">
+                    <a href="#home" class="btn-floating btn-large red">
+                        <i class="large material-icons">arrow_upward</i>
+                    </a>
+                </div>
+
+                <main>
+                    <section class="quiz">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col s12 m12 l12">
+                                    <div class="card-panel">
+                                        <div class="row ">
+                                            <h4 class="header2">Questionnaire about Your Preference</h4>
+                                        </div>
+                                        <div class="row">
+                                            <form class="col s12">
+                                                <div class="row">
+                                                    <div class="input-field col s6">
+                                                        <select>
+                                                            <option value="" disabled selected>Choose</option>
+                                                            <option value="1">Male</option>
+                                                            <option value="2">Female</option>
+                                                            <option value="3">Prefer not to say</option>
+                                                        </select>
+                                                        <label>1. Select Gender</label>
+                                                    </div>
+                                                    <div class="input-field col s6">
+                                                        <select>
+                                                            <option value="" disabled selected>Choose</option>
+                                                            <option value="1">18 - 25</option>
+                                                            <option value="2">26 - 33</option>
+                                                            <option value="3">34 - 41</option>
+                                                            <option value="3">42 - 49</option>
+                                                            <option value="3">50 or above</option>
+                                                        </select>
+                                                        <label>2. Select Age Group</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row divider"></div>
+                                                <div class="row rowt">
+                                                    <div class="input-field col l6 s6">
+                                                        <select>
+                                                            <option value="" disabled selected>Choose</option>
+                                                            <option value="1">Once a Month</option>
+                                                            <option value="2">Twice a Month</option>
+                                                            <option value="3">Once a Week</option>
+                                                            <option value="3">Twice a Week</option>
+                                                            <option value="3">Everyday of the Week</option>
+                                                        </select>
+                                                        <label>3. How often do you drink wine?</label>
+                                                    </div>
+                                                    <div class="col l6 s6 center-align">
+                                                        <img class="qi" src="assets/images/q1.jpeg">
+                                                    </div>
+                                                </div>
+                                                <div class="row rowt">
+                                                    <div class="input-field col l6 s6">
+                                                        <select>
+                                                            <option value="" disabled selected>Choose</option>
+                                                            <option value="1">Fruity Taste</option>
+                                                            <option value="2">Dry Taste</option>
+                                                            <option value="3">Fine Taste</option>
+                                                            <option value="4">Never tasted Wine before</option>
+                                                        </select>
+                                                        <label>4. What taste do you prefer?</label>
+                                                    </div>
+                                                    <div class="col l6 s6 center-align">
+                                                        <img class="qi" src="assets/images/q2.jpeg">
+                                                    </div>
+                                                </div>
+                                                <div class="row rowt">
+                                                    <div class="input-field col l6 s6">
+                                                        <select>
+                                                            <option value="" disabled selected>Choose</option>
+                                                            <option value="1">$100-$320 /Bottle</option>
+                                                            <option value="2">$321-$600 /Bottle</option>
+                                                            <option value="3">$601-$1000 /Bottle</option>
+                                                            <option value="4">$1000 or above /Bottle</option>
+                                                        </select>
+                                                        <label>5. What is your Prefered Price Range?</label>
+                                                    </div>
+                                                    <div class="col l6 s6 center-align">
+                                                        <img class="qi" src="assets/images/q3.jpeg">
+                                                    </div>
+                                                </div>
+                                                <div class="row center-align">
+                                                        <br><br><br>
+                                                        <button class="btn red waves-effect waves-light" type="submit" name="action">Submit
+                                                            <i class="mdi-content-send"></i>
+                                                        </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>                  
+                    </section>
+                </main>
+                
+        <!-- Footer -->
+            <footer class="page-footer black " id="contact">
+                    <div class="center-align">
+                        <div class="row ">
+                            <div class="divider"></div><br>
+                                <div class="container">
+                                    <div class="col l6 s6 left-align">
+                                        <h6 class="white-text ">Contact Us! </h6>
+                                        <p class="grey-text text-lighten-4 ">Tel: 2663 9993</p>
+                                        <p class="grey-text text-lighten-4 ">Email: <a href="mailto:enquiry@winetoyou.com ">enquiry@winetoyou.com</br> </p>
+                                        <p class="grey-text text-lighten-4 ">Address: Hong Kong</p>
+                                    </div>
+                                    <div class="col l4 offset-l1 s6">
+                                            <h6 class="white-text ">Social Media Connections</h6><br>
+                                            <div class="col s4 m4 l3 offset-l2 center-align">
+                                                    <a href=" https://www.facebook.com/husnan.alam " target="_blank "><i class="fab fa-facebook "></i></a>
+                                        </div>
+                                        <div class="col s4 m4 l3 center-align">
+                                            <a href="https://www.instagram.com/alam3035/ " target="_blank "><i class="fab fa-instagram "></i></a>
+                                        </div>
+                                        <div class="col s4 m4 l3 center-align">
+                                            <a href="https://www.linkedin.com/in/alamhusnan/ " target="_blank "><i class="fab fa-twitter"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+    
+            <!--copyright-->
+                    <div class="footer-copyright center-align">
+                        <div class="container ">
+                            © 2018 Copyright reserved by Wine To You Global Ltd
+                        </div>
+                    </div>
+             </footer>
+    
+
+
+
+
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js "></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js "></script>
+
+
+        <script>
+            // Sidenav
+            const sideNav = document.querySelector(".sidenav ");
+            M.Sidenav.init(sideNav, {});
+
+            // Slider
+            const slider = document.querySelector(".slider ");
+            M.Slider.init(slider, {
+                indicators: false,
+                height: 700,
+                transition: 500,
+                interval: 6000
+            });
+
+            // Dropdown
+            $(".dropdown-trigger ").dropdown({
+                hover: true,
+                constrainWidth: false
+            });
+
+            // Material Boxed
+            const mb = document.querySelectorAll(".materialboxed ");
+            M.Materialbox.init(mb, {});
+
+            // ScrollSpy
+            const ss = document.querySelectorAll(".scrollspy ");
+            M.ScrollSpy.init(ss, {});
+
+            $(document).ready(function(){
+                $('select').formSelect();
+            });
+        </script>
+
+
+
+    
+</body>
+</html>
