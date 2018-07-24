@@ -14,8 +14,6 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 const knexFile = require('./knexfile')[NODE_ENV];
 const knex = require('knex')(knexFile);
 
-const port = process.env.PORT || 3000;
-
 // Check for Logged in User
 const isLoggedIn = require('./utils/guard').isLoggedIn;
 

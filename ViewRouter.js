@@ -91,8 +91,10 @@ module.exports = class ViewRouter {
             console.log(req.body);
 
             res.send('Message received');
-            knex('order').insert({subscription: req.body.subscription}).then(function () {
-            });        
+            knex('order').insert({
+                subscription: req.body.subscription,
+                facebookid: middleWare
+            }).then(function() {});
         })
 
         // Checkout
