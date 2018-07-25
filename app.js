@@ -48,12 +48,7 @@ passportFacebookSetup(app, knex);
 
 // Routes
 const ViewRouter = require('./ViewRouter.js');
-
-
-
 app.use('/', new ViewRouter().router(knex));
-
-
 
 const httpsOptions = {
     key: fs.readFileSync('./localhost.key'),

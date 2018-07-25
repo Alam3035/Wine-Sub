@@ -108,11 +108,11 @@ App = {
                     from: account
                 });
             }).then(function(result) {
-                return axios.post('https://localhost:3000/tx', {
+                return axios.post('https://www.wine2u.shop/tx', {
                     txid: result.tx
                 });
-              }).then(function() {
-                return document.location=('https://localhost:3000/done');
+            }).then(function() {
+                return document.location = ('https://www.wine2u.shop/done');
             }).catch(function(err) {
                 console.log(err);
             })
@@ -133,7 +133,7 @@ App = {
 
 
 $(function() {
-  $(window).load(function() {
-    App.init();
-  });
+    $(window).load(function() {
+        App.init();
+    });
 });

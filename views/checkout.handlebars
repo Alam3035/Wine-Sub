@@ -10,7 +10,7 @@
                         <div class="card-title activator text-darken-4 center-align">
                             <h1>Subscription Plan</h1>
                         </div>
-                            <h3 class="center">Monthly Plan</h3>
+                        <h3 class="center">Monthly Plan</h3>
                     </div>
                 </div>
 
@@ -57,15 +57,6 @@
                                     <form id="input-data">
                                         <input placeholder="Please type it here" type="text" id="address">
                                         <div>
-                                            <script>    
-                                                $.get('/api/subscription').then(data => {
-                                                data.forEach(e => {
-                                                    $("#my-detail").append(UserDetail(
-                                                        e.email,
-                                                    ))
-                                                });
-                                                });                                      
-                                                </script>
                                         </div>
                                     </form>
                                 </div>
