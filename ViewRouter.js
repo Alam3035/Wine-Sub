@@ -64,7 +64,7 @@ module.exports = class ViewRouter {
         });
 
         // Questionnaire
-        router.get('/questionnaire', function(req, res) {
+        router.get('/questionnaire', isLoggedIn, function(req, res) {
             res.render('questionnaire');
         });
 
@@ -83,7 +83,7 @@ module.exports = class ViewRouter {
         })
 
         // Questionnaire-Result
-        router.get('/qr', function(req, res) {
+        router.get('/qr', isLoggedIn, function(req, res) {
             res.render('qr');
         });
 
@@ -99,11 +99,11 @@ module.exports = class ViewRouter {
 
 
         // Subscription
-        router.get('/subscription', function(req, res) {
+        router.get('/subscription', isLoggedIn, function(req, res) {
             res.render('subscription');
         });
 
-        router.put('/subscription', function(req, res) {
+        router.put('/api/subscription', function(req, res) {
             res.send('Message received');
             knex('order').insert({
                 subscription: req.body.subscription,
@@ -111,7 +111,7 @@ module.exports = class ViewRouter {
             }).then(function() {});
         })
 
-        router.get('/subscription', function(req, res) {
+        router.get('/api/subscription', function(req, res) {
             res.send('Respond');
             knex.select("subscription").from("order").where("facebookid").then(function(data) {
                 return data;
@@ -119,7 +119,7 @@ module.exports = class ViewRouter {
         });
 
         // Checkout
-        router.get('/checkout', function(req, res) {
+        router.get('/checkout', isLoggedIn, function(req, res) {
             res.render('checkout');
         })
 
@@ -133,12 +133,12 @@ module.exports = class ViewRouter {
         })
 
         // Done Page
-        router.get('/done', function(req, res) {
+        router.get('/done', isLoggedIn, function(req, res) {
             res.render('done');
         })
 
         // Customer-Backend
-        router.get('/customer-backend', function(req, res) {
+        router.get('/customer-backend', isLoggedIn, function(req, res) {
             res.render('customer-backend');
         })
 
