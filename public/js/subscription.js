@@ -4,7 +4,7 @@ $(() => {
         axios.put('/api/subscription', {
                 "subscription": 1
             })
-            .then(() => document.location = ('https://localhost:3000/checkout'))
+            .then(() => document.location = ('https://www.wine2u.shop/checkout'))
             .catch(err => console.log(err));
     })
 
@@ -13,7 +13,7 @@ $(() => {
         axios.put('/api/subscription', {
                 "subscription": 4
             })
-            .then(() => document.location = ('https://localhost:3000/checkout'))
+            .then(() => document.location = ('https://www.wine2u.shop/checkout'))
             .catch(err => console.log(err));
     })
 
@@ -23,7 +23,7 @@ $(() => {
         axios.put('/api/subscription', {
                 "subscription": 12
             })
-            .then(() => document.location = ('https://localhost:3000/checkout'))
+            .then(() => document.location = ('https://www.wine2u.shop/checkout'))
             .catch(err => console.log(err));
     })
 })

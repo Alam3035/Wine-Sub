@@ -29,7 +29,7 @@ App = {
             App.web3Provider = web3.currentProvider;
         } else {
             // If no injected web3 instance is detected, fall back to Ganache
-            App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+            App.web3Provider = new Web3.providers.HttpProvider('http://www.wine2u.shop:7545');
         }
         web3 = new Web3(App.web3Provider);
 
@@ -108,11 +108,11 @@ App = {
                     from: account
                 });
             }).then(function(result) {
-                return axios.post('https://localhost:3000/tx', {
+                return axios.post('https://www.wine2u.shop/tx', {
                     txid: result.tx
                 });
             }).then(function() {
-                return document.location = ('https://localhost:3000/done');
+                return document.location = ('https://www.wine2u.shop/done');
             }).catch(function(err) {
                 console.log(err);
             })
