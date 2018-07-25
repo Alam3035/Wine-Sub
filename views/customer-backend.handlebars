@@ -22,7 +22,7 @@
 
                                     <div class="row">
                                         <label>Email: </label>
-                                        <input type="text" class="white-text" name="email" value="kd.dunk81@gmail.com" readonly/>
+                                        <input type="text" class="white-text" name="email" value="alam19941@hotmail.com" readonly/>
                                     </div>
 
                                     <div class="row">
@@ -77,11 +77,11 @@
         e.preventDefault();
 
         axios.put('/api/user/details', {
-                "username": $('#username').val(),
-                "email": $('#email').val(),
-                "telephone": $('#telephone').val(),
-                "address": $('#address').val(),
-            })
+            "username": $('#username').val(),
+            "email": $('#email').val(),
+            "telephone": $('#telephone').val(),
+            "address": $('#address').val(),
+        })
             .then(() => location.reload())
             .catch(err => console.log(err));
     })

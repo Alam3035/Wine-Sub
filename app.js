@@ -4,7 +4,7 @@ const app = express();
 const hb = require('express-handlebars');
 const fs = require('fs');
 const https = require('https')
-const passportSetup = require('./utils/strategies/LocalStrategy.js');
+    // const passportSetup = require('./utils/strategies/LocalStrategy.js');
 const passportFacebookSetup = require('./utils/strategies/FacebookStrategy.js')
 const expressSession = require('express-session');
 
@@ -48,12 +48,7 @@ passportFacebookSetup(app, knex);
 
 // Routes
 const ViewRouter = require('./ViewRouter.js');
-
-
-
 app.use('/', new ViewRouter().router(knex));
-
-
 
 const httpsOptions = {
     key: fs.readFileSync('./localhost.key'),
